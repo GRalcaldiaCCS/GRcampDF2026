@@ -55,26 +55,37 @@ body {
 .container {
     width: 90%;
     max-width: 450px;
-    margin: -40px auto 2rem; 
+    margin: 1rem auto 2rem;
     position: relative; 
     z-index: 10;
 }
 
 .btn {
+    /* Esto obliga a que se comporten igual */
     display: block;
+    box-sizing: border-box; 
+    width: 100%;
+    
+    /* Tipografía y espaciado */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
     padding: 1.2rem;
     margin-bottom: 1rem;
+    
+    /* Estética */
     text-align: center;
     text-decoration: none;
     color: #333;
     background: white;
     border-radius: 12px;
-    font-weight: 700;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    cursor: pointer;
+    
+    /* Eliminación de bordes y estilos nativos de <button> */
     border: none;
-    width: 100%;
-    font-family: 'Montserrat', sans-serif;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 /* Grilla de días */
@@ -84,13 +95,15 @@ body {
     gap: 10px;
     max-height: 0; 
     overflow: hidden;
-    transition: max-height 0.4s ease-out;
-    margin-bottom: 1rem;
+    transition: all 0.4s ease-out;
+    /* Eliminamos el margin-bottom para que no empuje el botón de encuesta cuando está cerrado */
+    margin-bottom: 0;
 }
 
 .days-grid.active {
-    max-height: 400px; /* Suficiente para mostrar los cuadros */
-    margin-bottom: 1.5rem;
+    max-height: 400px;
+    margin-bottom: 1.5rem; /* Solo añade margen cuando está abierto */
+    padding-top: 5px;
 }
 
 /* Botón de día individual */
