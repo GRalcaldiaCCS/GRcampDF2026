@@ -11,3 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
     
     console.log("Portal GR Camp 2026 cargado correctamente.");
 });
+
+
+const btnFotos = document.getElementById('btn-fotos');
+    const gridFotos = document.getElementById('grid-fotos');
+
+    btnFotos.addEventListener('click', () => {
+        // Toggle de la clase active para mostrar/ocultar los cuadros
+        gridFotos.classList.toggle('active');
+        
+        // Opcional: Desplazar la pantalla un poco hacia abajo para ver los botones
+        if(gridFotos.classList.contains('active')){
+            setTimeout(() => {
+                gridFotos.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 300);
+        }
+    });
+})
