@@ -118,3 +118,40 @@
     background: var(--purple-dark);
     color: white;
 }
+
+.header-slim {
+    background: linear-gradient(135deg, var(--deep-blue), var(--purple-dark), var(--magenta));
+    padding: 4rem 1rem 2rem;
+    text-align: center;
+    color: white;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    margin-bottom: -30px; /* Efecto de solapamiento con el contenido */
+}
+
+.schedule-header h2 {
+    color: var(--deep-blue);
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+@keyframes slideUpFade {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.schedule-item {
+    animation: slideUpFade 0.5s ease forwards;
+}
+
+/* Retraso progresivo para cada ítem */
+.schedule-item:nth-child(1) { animation-delay: 0.1s; }
+.schedule-item:nth-child(2) { animation-delay: 0.2s; }
+.schedule-item:nth-child(3) { animation-delay: 0.3s; }

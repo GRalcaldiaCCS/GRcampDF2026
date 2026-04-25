@@ -38,3 +38,27 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+// Lógica 3: Menú Lateral
+const menuToggle = document.getElementById('mobile-menu');
+const sideMenu = document.getElementById('side-menu');
+const overlay = document.getElementById('menu-overlay');
+
+if (menuToggle) {
+    menuToggle.onclick = function() {
+        sideMenu.classList.toggle('active');
+        overlay.classList.toggle('active');
+        
+        // Animación de las rayitas (Opcional: las convierte en X)
+        const spans = menuToggle.getElementsByTagName('span');
+        spans[0].style.transform = sideMenu.classList.contains('active') ? 'rotate(45deg) translate(5px, 5px)' : '';
+        spans[1].style.opacity = sideMenu.classList.contains('active') ? '0' : '1';
+        spans[2].style.transform = sideMenu.classList.contains('active') ? 'rotate(-45deg) translate(7px, -8px)' : '';
+    };
+}
+
+// Cerrar al hacer clic en el overlay
+overlay.onclick = () => {
+    sideMenu.classList.remove('active');
+    overlay.classList.remove('active');
+};

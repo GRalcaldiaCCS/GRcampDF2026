@@ -9,6 +9,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="menu-toggle" id="mobile-menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<nav class="side-menu" id="side-menu">
+    <div class="menu-header">
+        <img src="assets/logo-escuela.png" alt="Logo" class="menu-logo">
+    </div>
+    <ul class="menu-links">
+        <li><a href="index.html"><img src="assets/icons/home.png" alt="Inicio" class="menu-icon">Inicio</a></li>
+        <li><a href="cronograma.html"> <img src="assets/icons/calendar.png" alt="Inicio" class="menu-icon">Cronograma</a></li>
+        <li><a href="#ubicacion"> <img src="assets/icons/location.png" alt="Inicio" class="menu-icon">Ubicación</a></li>
+        <li><a href="#fotos"><img src="assets/icons/camera.png" alt="Inicio" class="menu-icon">Fotos</a></li>
+        <li><a href="#news"><img src="assets/icons/news.png" alt="Inicio" class="menu-icon">Noticias/Anuncios</a></li>
+        <li><a href="#faq"><img src="assets/icons/qa.png" alt="Inicio" class="menu-icon">Preguntas Frecuentes</a></li>
+        <li><a href="#faq"><img src="assets/icons/instagram.png" alt="Inicio" class="menu-icon">Instagram</a></li>
+        <li><a href="#debora"><img src="assets/icons/rg.png" alt="Inicio" class="menu-icon">Sobre Débora</a></li>
+        <li><a href="#escuela"><img src="assets/icons/logo-alcaldia.jpg" alt="Inicio" class="menu-icon-special">Sobre el Club</a></li>
+    </ul>
+</nav>
+
+<header class="header-slim">
+    <div class="header-content">
+        <h1>Cronograma</h1>
+        <p>Training Camp 2026</p>
+    </div>
+</header>
+
+<div class="menu-overlay" id="menu-overlay"></div>
     <main class="container">
     <div class="schedule-header">
         <h2>Cronograma de Actividades</h2>
@@ -228,8 +260,18 @@
         </div>
     </div>
 
-    <a href="index.html" class="btn btn-alt">⬅️ VOLVER AL INICIO</a>
+    <a href="index.html" class="btn btn-alt"> <img src="assets/icons/left-arrow.png" alt="Inicio" class="menu-icon-arrow">VOLVER AL INICIO</a>
     <script src="js/script.js"></script>
+
+     <footer>
+        <p>&copy; Escuela de Gimnasia Rítmica Alcaldía de Caracas </p>
+        <a href="https://maps.app.goo.gl/v8vh84R9nfTWKJ5R6" target="_blank" style="text-decoration: none; color: inherit;">
+   <address>
+       <strong>Complejo Deportivo Los Gemelos</strong><br>
+       📍 Transversal 22, Montalbán I, Caracas, Venezuela 🇻🇪
+   </address>
+</a>
+    </footer>
 </main>
 </body>
 </html>
