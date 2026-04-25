@@ -1,0 +1,120 @@
+/* Contenedor del cronograma */
+.schedule-wrapper {
+    margin-top: 20px;
+}
+
+.schedule-item {
+    display: flex;
+    background: white;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid var(--purple-dark);
+}
+
+
+.time-col {
+    background: var(--purple-dark);
+    color: white;
+    padding: 15px;
+    min-width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.activity-col {
+    padding: 15px;
+    flex-grow: 1;
+}
+
+.activity-col h3 {
+    margin: 5px 0;
+    font-size: 1rem;
+    color: var(--deep-blue);
+}
+
+.activity-col p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: #666;
+}
+
+
+.category {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: var(--magenta);
+    background: #fcefff;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+.category.gold {
+    background: #fff3cd;
+    color: #856404;
+}
+
+
+.schedule-item.special {
+    border-left-color: var(--magenta);
+    background: #fff9ff;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 480px) {
+    .schedule-item {
+        flex-direction: column; /* En móviles muy pequeños, la hora queda arriba */
+    }
+    .time-col {
+        width: 100%;
+        padding: 5px;
+    }
+}
+
+/* --- LÓGICA DE VISIBILIDAD DE DÍAS --- */
+
+/* Oculta los contenedores de los días que no están activos */
+.schedule-day-container {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* Muestra el día seleccionado */
+.schedule-day-container.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Estilos para que los botones de filtro se vean mejor */
+.day-selector {
+    display: flex;
+    flex-wrap: wrap; /* Para que en móvil se acomoden en dos filas si es necesario */
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border: 2px solid var(--purple-dark);
+    background: white;
+    color: var(--purple-dark);
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background: var(--purple-dark);
+    color: white;
+}
