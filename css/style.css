@@ -1,33 +1,30 @@
 :root {
-    --primary: #0046ad;
-    --secondary: #00a859;
+    --deep-blue: #221E53;
+    --purple-dark: #2F1F55;
+    --magenta: #802A8C;
     --white: #ffffff;
-    --gray-light: #f8f9fa;
 }
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--gray-light);
+    background-color: var(--white); 
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    padding: 0;
 }
 
 .header {
-    background-color: var(--white);
-    padding: 3rem 1rem;
+   
+    background: linear-gradient(to bottom, var(--deep-blue), var(--purple-dark), var(--magenta));
+    padding: 3.5rem 1rem;
     text-align: center;
-    border-bottom: 4px solid var(--primary);
-    /* Opcional: Agregar las ondas de Illustrator de fondo */
-    /* background-image: url('../assets/ondas.svg'); */
-    /* background-size: cover; */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 .container {
     width: 90%;
     max-width: 450px;
-    margin: 2rem auto;
+    margin: -20px auto 2rem; 
 }
 
 .btn {
@@ -37,23 +34,77 @@ body {
     text-align: center;
     text-decoration: none;
     color: #333;
-    background: var(--white);
-    border-radius: 10px;
+    background: white;
+    border-radius: 12px;
     font-weight: 700;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: none;
+    width: 100%;
 }
 
-.btn-primary { border-left: 10px solid var(--primary); }
-.btn-secondary { border-left: 10px solid var(--secondary); }
+/* Contenedor de los botones de días */
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    max-height: 0; 
+    overflow: hidden;
+    transition: max-height 0.4s ease-out;
+    margin-bottom: 1.5rem;
+}
 
-.btn:active { transform: scale(0.97); }
+.days-grid.active {
+    max-height: 300px; 
+}
 
-.status-message {
-    text-align: center;
-    margin-top: 1rem;
+.day-btn {
+    aspect-ratio: 1 / 1; 
+    background-color: var(--purple-dark);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    text-decoration: none;
     font-size: 0.9rem;
-    color: #666;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+
+.day-btn:hover {
+    background-color: var(--magenta);
+}
+
+
+.day-btn span::after {
+    content: attr(data-text);
+}
+
+.day-btn:hover span::after {
+    content: "IR";
+}
+
+.day-btn span {
+    display: none; 
+}
+
+
+.day-label {
+    display: block;
+}
+
+.day-btn:hover .day-label {
+    display: none;
+}
+
+.day-btn .hover-text {
+    display: none;
+}
+
+.day-btn:hover .hover-text {
+    display: block;
 }
 
 footer {
