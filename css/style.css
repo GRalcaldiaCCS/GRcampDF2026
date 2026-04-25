@@ -16,24 +16,41 @@ body {
 }
 
 .header {
+    /* Mantenemos tu degradado Top-Bottom solicitado */
     background: linear-gradient(to bottom, var(--deep-blue), var(--purple-dark), var(--magenta));
-    padding: 4rem 1rem;
+    
+    /* Ajustamos el padding para que la imagen respire, 
+       pero reducimos el padding vertical ya que la imagen es ancha */
+    padding: 1rem 0; 
     text-align: center;
     color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    
+    /* Aseguramos que el header se adapte al contenido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.header h1 {
-    margin: 0;
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+
+.banner-img {
+
+    max-width: 100%;    
+    height: auto;      
+    
+    width: 90%;         
+    max-width: 800px;   
+    
+    display: block;   
+    margin: 0 auto; 
 }
 
 .container {
     width: 90%;
     max-width: 450px;
-    margin: -30px auto 2rem; /* Solapa un poco con el header */
+    margin: -40px auto 2rem; 
+    position: relative; 
+    z-index: 10;
 }
 
 .btn {
