@@ -1,16 +1,13 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
-    const btnFotos = document.getElementById('btn-fotos');
-    const gridFotos = document.getElementById('grid-fotos');
+    const boton = document.getElementById('btn-fotos');
+    const grilla = document.getElementById('grid-fotos');
 
-    if (btnFotos && gridFotos) {
-        btnFotos.addEventListener('click', (e) => {
-            e.preventDefault(); // Evita cualquier comportamiento extraño
-            gridFotos.classList.toggle('active');
-            console.log("Toggle de fotos ejecutado"); // Revisa esto en la consola (F12)
-        });
+    if (boton && grilla) {
+        boton.onclick = function() {
+            grilla.classList.toggle('active');
+            console.log("Estado de la grilla cambiado");
+        };
+    } else {
+        console.error("No se encontraron los elementos. Revisa los IDs en el HTML.");
     }
 });
-    });
-})
