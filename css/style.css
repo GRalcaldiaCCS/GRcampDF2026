@@ -16,19 +16,13 @@ body {
 }
 
 .header {
-    /* Mantenemos tu degradado Top-Bottom solicitado */
-    background: linear-gradient(to bottom, var(--deep-blue), var(--purple-dark), var(--magenta));
-    
-    /* Ajustamos el padding para que la imagen respire, 
-       pero reducimos el padding vertical ya que la imagen es ancha */
-    padding: 1rem 0; 
+   background: linear-gradient(to bottom, var(--deep-blue), var(--purple-dark), var(--magenta));
+    padding-top: 2rem; 
+    padding-bottom: 0; 
     text-align: center;
-    color: white;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-    
-    /* Aseguramos que el header se adapte al contenido */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -38,8 +32,7 @@ body {
     max-width: 650px;   
     height: auto;      
     display: block;
-    margin: 0 auto;    
-    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+    margin: 0 auto; 
 }
 
 @media (min-width: 768px) {
@@ -61,19 +54,19 @@ body {
 }
 
 .btn {
-    /* Esto obliga a que se comporten igual */
+
     display: block;
     box-sizing: border-box; 
     width: 100%;
     
-    /* Tipografía y espaciado */
+
     font-family: 'Montserrat', sans-serif;
     font-size: 1rem;
     font-weight: 700;
     padding: 1.2rem;
     margin-bottom: 1rem;
     
-    /* Estética */
+  
     text-align: center;
     text-decoration: none;
     color: #333;
@@ -81,11 +74,14 @@ body {
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     
-    /* Eliminación de bordes y estilos nativos de <button> */
+   
     border: none;
     cursor: pointer;
     appearance: none;
     -webkit-appearance: none;
+
+    border-left: 8px solid var(--deep-blue); 
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Grilla de días */
