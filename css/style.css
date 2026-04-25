@@ -34,15 +34,22 @@ body {
 
 
 .banner-img {
-
-    max-width: 100%;    
+    width: 100%;        
+    max-width: 650px;   
     height: auto;      
+    display: block;
+    margin: 0 auto;    
+    filter: drop-shadow(0 5px 15px rgba(0,0,0,0.1));
+}
+
+@media (min-width: 768px) {
+    .banner-img {
+        max-width: 600px; /* Aquí controlas el tamaño en la PC */
+    }
     
-    width: 90%;         
-    max-width: 800px;   
-    
-    display: block;   
-    margin: 0 auto; 
+    .header {
+        padding: 3rem 1rem;
+    }
 }
 
 .container {
