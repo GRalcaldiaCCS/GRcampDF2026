@@ -10,19 +10,28 @@
 <body>
 
     <div class="menu-toggle" id="mobile-menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+        <span class="menu-text">MENÚ</span>
+        <div class="hamburger-lines">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
 
-<nav class="side-menu" id="side-menu">
+<header class="header">
+    <span class="top-label">SITIO WEB OFICIAL</span>
+    <img src="assets/banner-top.png" alt="Banner" class="banner-img">
+</header>
+
+
+    <nav class="side-menu" id="side-menu">
     <div class="menu-header">
         <img src="assets/logo-escuela.png" alt="Logo" class="menu-logo">
     </div>
     <ul class="menu-links">
         <li><a href="index.html"><img src="assets/icons/home.png" alt="Inicio" class="menu-icon">Inicio</a></li>
         <li><a href="cronograma.html"> <img src="assets/icons/calendar.png" alt="Inicio" class="menu-icon">Cronograma</a></li>
-        <li><a href="#ubicacion"> <img src="assets/icons/location.png" alt="Inicio" class="menu-icon">Ubicación</a></li>
+        <li><a href="ubicacion.html"> <img src="assets/icons/location.png" alt="Inicio" class="menu-icon">Ubicación</a></li>
         <li><a href="#fotos"><img src="assets/icons/camera.png" alt="Inicio" class="menu-icon">Fotos</a></li>
         <li><a href="#news"><img src="assets/icons/news.png" alt="Inicio" class="menu-icon">Noticias/Anuncios</a></li>
         <li><a href="#faq"><img src="assets/icons/qa.png" alt="Inicio" class="menu-icon">Preguntas Frecuentes</a></li>
@@ -31,44 +40,101 @@
         <li><a href="#escuela"><img src="assets/icons/logo-alcaldia.jpg" alt="Inicio" class="menu-icon-special">Sobre el Club</a></li>
     </ul>
 </nav>
+    
+<div class="countdown-container">
+    <h2 class="countdown-title"> F A L T A N</h2>
+    <div id="countdown" class="countdown-timer">
+        <div class="time-unit">
+            <span id="days">00</span>
+            <small>Días</small>
+        </div>
+        <div class="time-unit">
+            <span id="hours">00</span>
+            <small>Horas</small>
+        </div>
+        <div class="time-unit">
+            <span id="minutes">00</span>
+            <small>Minutos</small>
+        </div>
+        <div class="time-unit">
+            <span id="seconds">00</span>
+            <small>Segundos</small>
+        </div>
+    </div>
+</div>
+
+<section class="hero-slider-container">
+    <div class="slider">
+        <div class="slides">
+            <img src="assets/club1.jpeg" alt="Foto 1">
+            <img src="assets/club2.jpeg" alt="Foto 2">
+            <img src="assets/club3.jpeg" alt="Foto 3">
+        </div>
+        
+        <button class="prev" id="prevBtn">❮</button>
+        <button class="next" id="nextBtn">❯</button>
+    </div>
+</section>
 
 <div class="menu-overlay" id="menu-overlay"></div>
 
- <header class="header">
-        <img src="assets/banner-top.png" alt="Niveles y Categorías - Escuela de Gimnasia Rítmica Alcaldía de Caracas - 11 al 17 de mayo 2026" class="banner-img">
-    </header>
+
 
     <main class="container">
-        <a href="cronograma.html" class="btn">📅 CRONOGRAMA / PROGRAMAÇÃO</a>
-
-       <button class="btn" id="btn-fotos">📸 FOTOS DEL EVENTO / GALERIA</button>
-
-<div class="days-grid" id="grid-fotos">
-    <a href="URL_DIA_1" class="day-btn" data-label="Día 1"></a>
-    <a href="URL_DIA_2" class="day-btn" data-label="Día 2"></a>
-    <a href="URL_DIA_3" class="day-btn" data-label="Día 3"></a>
-    <a href="URL_DIA_4" class="day-btn" data-label="Día 4"></a>
-    <a href="URL_DIA_5" class="day-btn" data-label="Día 5"></a>
-</div>
-
-        <a href="https://forms.gle/zX3CHXrQDWiyQ7zFA" target="_blank" class="btn btn-secondary">
-            📝 ENCUESTA / PESQUISA
+    <div class="bento-grid">
+        <a href="cronograma.html" class="bento-item item-1">
+            <span>Cronograma</span>
+            <img src="assets/icons/calendar.png" alt="Cronograma">
+        </a>
+        
+        <a href="#news" class="bento-item item-2">
+            <span>Noticias/Anuncios</span>
+            <img src="assets/icons/news.png" alt="Ubicación">
         </a>
 
-        <a href="https://www.instagram.com/gr_alcaldiadeccs" target="_blank" class="btn btn-instagram">
-    📸 SIGUENOS EN INSTAGRAM
-</a>
+        <a href="ubicacion.html" class="bento-item item-3">
+            <span>Ubicación</span>
+            <img src="assets/icons/location.png" alt="Ubicación">
+        </a>
 
-        <div id="status-box" class="status-message">
-            </div>
-    </main>
+
+        <div class="bento-item item-4" id="btn-fotos">
+            <span>Galería</span>
+            <img src="assets/icons/camera.png" alt="Fotos">
+        </div>
+
+        <a href="https://www.instagram.com/gr_alcaldiadeccs" target="_blank" class="bento-item item-5">
+            <span>Instagram</span>
+            <img src="assets/icons/instagram.png" alt="Instagram">
+        </a>
+
+        <a href="https://wa.me/584126114927 " target="_blank" class="bento-item item-6">
+            <span>WhatsApp Escuela</span>
+            <img src="assets/icons/whatsapp.png" alt="WhatsApp">
+        </a>
+
+        <a href="https://forms.gle/zX3CHXrQDWiyQ7zFA" target="_blank" class="bento-item item-7">
+            <span>Encuesta</span>
+            <img src="assets/icons/news.png" alt="Encuesta">
+        </a>
+    </div>
+
+    <div class="days-grid" id="grid-fotos">
+        <h2>Descargar fotos</h2>
+        <a href="https://drive.google.com/drive/folders/1Rs9687LRIrpU_h9WC3MrGdBv7uyxT5SP?usp=drive_link" target="_blank" class="day-card"><img src="assets/icons/camera.png" alt="Cámara"><span>Día 1</span></a>
+        <a href="https://drive.google.com/drive/folders/1aZlLjX0qqn9OSNXcGFZJ8u2tUr5d9ffn?usp=sharing" target="_blank" class="day-card"><img src="assets/icons/camera.png" alt="Cámara"><span>Día 2</span></a>
+        <a href="URL_DIA_3" class="day-card"><img src="assets/icons/camera.png" alt="Cámara"><span>Día 3</span></a>
+        <a href="URL_DIA_4" class="day-card"><img src="assets/icons/camera.png" alt="Cámara"><span>Día 4</span></a>
+        <a href="URL_DIA_5" class="day-card"><img src="assets/icons/camera.png" alt="Cámara"><span>Día 5</span></a>
+    </div>
+</main>
 
     <footer>
-        <p>&copy; Escuela de Gimnasia Rítmica Alcaldía de Caracas </p>
+        <p>&copy;  Escuela de Gimnasia Rítmica Alcaldía de Caracas 2026</p>
         <a href="https://maps.app.goo.gl/v8vh84R9nfTWKJ5R6" target="_blank" style="text-decoration: none; color: inherit;">
    <address>
-       <strong>Complejo Deportivo Los Gemelos</strong><br>
-       📍 Transversal 22, Montalbán I, Caracas, Venezuela 🇻🇪
+       <strong>📍Complejo Deportivo Los Gemelos</strong><br>
+        Transversal 22, Montalbán I, Caracas, Venezuela 🇻🇪
    </address>
 </a>
     </footer>

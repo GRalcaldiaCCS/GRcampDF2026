@@ -3,6 +3,17 @@
     --purple-dark: #2F1F55;
     --magenta: #802A8C;
     --white: #ffffff;
+    --light-gray: #f8f9fa;
+
+    --brazil-green: #009C3B;
+    --brazil-yellow: #FEDD00;
+}
+
+html, body {
+
+    
+    max-width: 100%;
+    overflow-x: hidden; 
 }
 
 body {
@@ -18,18 +29,20 @@ body {
 .header {
    background: linear-gradient(to bottom, var(--deep-blue), var(--purple-dark), var(--magenta));
     padding-top: 2rem; 
-    padding-bottom: 0; 
+    padding-bottom: 0 !important;
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+    width: 100%;
+    overflow: hidden;
 
+}
 
 .banner-img {
     width: 100%;        
-    max-width: 650px;   
+    max-width: 1200px;   
     height: auto;      
     display: block;
     margin: 0 auto; 
@@ -37,7 +50,7 @@ body {
 
 @media (min-width: 768px) {
     .banner-img {
-        max-width: 600px; 
+        max-width: 800px; 
     }
     
     .header {
@@ -46,11 +59,15 @@ body {
 }
 
 .container {
-    width: 90%;
-    max-width: 450px;
-    margin: 1rem auto 2rem;
+    width: 95%;
+    max-width: 500px;
+    margin: 30px auto;
+    margin: 20% auto;
     position: relative; 
+    padding-top: 60px;
+    overflow: visible;
     z-index: 10;
+    box-sizing: border-box;
 }
 
 .btn {
@@ -92,17 +109,16 @@ body {
     max-height: 0; 
     overflow: hidden;
     transition: all 0.4s ease-out;
-    /* Eliminamos el margin-bottom para que no empuje el botón de encuesta cuando está cerrado */
     margin-bottom: 0;
 }
 
 .days-grid.active {
     max-height: 400px;
-    margin-bottom: 1.5rem; /* Solo añade margen cuando está abierto */
+    margin-bottom: 1.5rem; 
     padding-top: 5px;
 }
 
-/* Botón de día individual */
+
 .day-btn {
     aspect-ratio: 1 / 1; 
     background-color: var(--purple-dark);
@@ -119,7 +135,7 @@ body {
 
 
 .day-btn::before {
-    content: attr(data-label); /* Lee "Día 1", etc. desde el HTML */
+    content: attr(data-label); 
 }
 
 .day-btn:hover {
@@ -128,7 +144,7 @@ body {
 }
 
 .day-btn:hover::before {
-    content: "IR"; /* Cambia el texto en hover */
+    content: "IR"; 
 }
 
 
@@ -152,38 +168,79 @@ address strong {
     color: var(--deep-blue);
 }
 
-/* Botón Hamburguesa */
+
 .menu-toggle {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+    top: 15px;
+    right: 15px;
+    z-index: 1001; 
     cursor: pointer;
-    width: 30px;
-    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(47, 31, 85, 0.8); 
+    padding: 8px 15px;
+    border-radius: 25px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.menu-text {
+    color: #ffffff !important; 
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hamburger-lines {
+    width: 20px;
+    height: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.menu-toggle span {
+.hamburger-lines span {
     display: block;
-    height: 4px;
+    height: 2px;
     width: 100%;
-    background: white; 
-    border-radius: 10px;
-    transition: all 0.3s ease;
+    background-color: #ffffff; 
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
 }
 
-/* Menú Lateral Glassmorphism */
+.menu-text {
+    color: #ffffff !important; 
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.hamburger-lines {
+    width: 20px;
+    height: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger-lines span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #ffffff; 
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+/* Menú Lateral */
 .side-menu {
     position: fixed;
     top: 0;
-    right: -400px; /* Oculto por defecto */
+    right: -400px; 
     width: 280px;
     height: 100%;
-    background: rgba(47, 31, 85, 0.9); /* Morado con transparencia */
-    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    background: rgba(47, 31, 85, 0.9); 
+    backdrop-filter: blur(10px); 
     z-index: 999;
     transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     padding: 20px;
@@ -255,5 +312,323 @@ width: 24px;
     height: 50px;
     object-fit: contain;
     margin-right: 50px;
+}
+
+.side-menu {
+    
+    overflow-y: auto; 
+    max-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+}
+
+
+body.menu-open {
+    overflow: hidden;
+}
+
+
+
+.hero-slider-container {
+    width: 100%;
+    padding: 40px 20px;
+    background-color: var(--purple-dark); 
+    background: linear-gradient(180deg, var(--purple-dark) 0%, var(--deep-blue) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 25px; 
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    width: 100%; 
+    transition: transform 0.8s cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.slides img {
+    min-width: 100%; 
+    height: 400px;
+    object-fit: cover;
+}
+
+.main-titles {
+    text-align: center;
+    color: #ffffff !important; 
+    background: transparent !important; 
+    margin-top: 80px; 
+    padding: 30px 20px;
+    width: 100%;
+    position: relative;
+    z-index: 5; 
+}
+
+.main-titles h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3); 
+}
+
+.main-titles p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #f0f0f0;
+    color: var(--purple-dark);
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px dashed var(--purple-dark);
+}
+
+.slider {
+    position: relative; 
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 50%;
+    transition: background 0.3s;
+    z-index: 10;
+}
+
+.prev:hover, .next:hover {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.prev { left: 15px; }
+.next { right: 15px; }
+
+/* Desktop Rahi */
+@media (min-width: 768px) {
+    
+
+    header { padding: 10px; }
+    header h1 { font-size: 1rem; }
+
+  
+    .header-carousel {
+        height: 400px; 
+    }
+
+    .banner-content {
+    
+        background-size: cover; 
+        background-position: center bottom; 
+    }
+
+
+    .container {
+        max-width: 650px;
+        margin: -40px auto 30px; 
+    }
+    
+    .days-grid { gap: 10px; }
+}
+
+.main-titles {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--purple-dark); 
+    color: white;
+}
+
+.map-container iframe {
+    width: 100% !important;
+    max-width: 100%;
+}
+
+
+.day-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 50px; 
+    margin-bottom: 25px;
+}
+
+.btn-download-flex {
+    display: inline-flex; 
+    align-items: center;  
+    justify-content: center; 
+    gap: 10px;            
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+
+.btn-icon {
+    width: 20px;          
+    height: 20px;         
+    object-fit: contain;  
+}
+
+
+.btn-download-flex span {
+    white-space: nowrap;
+}
+
+.top-label {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: var(--deep-blue); 
+    color: rgba(255, 255, 255, 0.9); 
+    font-size: 0.7rem; 
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 0 4px 0; 
+}
+
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    padding: 10px;
+}
+
+.bento-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 20px; 
+    text-decoration: none;
+    font-weight: 700;
+    color: white;
+    font-size: 0.9rem;
+    transition: transform 0.2s ease;
+    aspect-ratio: 1 / 1; 
+    
+}
+
+.bento-item img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px; 
+    filter: brightness(0) invert(1); 
+}
+
+
+.item-1, .item-4, .item-5, .item-7 { 
+    background: linear-gradient(135deg, var(--deep-blue) 0%, var(--magenta) 100%);
+}
+.item-2, .item-3, .item-6, .item-7 {
+     background: linear-gradient(135deg, var(--brazil-green) 0%, var(--deep-blue) 100%);
+}
+
+
+.bento-item:active { transform: scale(0.95); }
+
+
+.days-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.day-card {
+    background: var(--purple-dark);
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+    padding: 15px 5px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.day-card img {
+    width: 25px; 
+    height: auto;
+    margin-bottom: 5px;
+    filter: brightness(0) invert(1); 
+}
+
+.day-card span {
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+.day-card:active {
+    background: var(--brazil-green);
+}
+
+
+.countdown-container {
+    background-color: #ffffff;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.countdown-title {
+    color: var(--purple-dark);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.countdown-timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.time-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 65px;
+}
+
+.time-unit span {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    line-height: 1;
+}
+
+.time-unit small {
+    font-size: 0.7rem;
+    color: var(--magenta); /* Usamos el magenta para las etiquetas */
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 5px;
 }
 
