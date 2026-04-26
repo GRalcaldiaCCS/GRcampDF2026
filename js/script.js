@@ -1,13 +1,13 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-
+    // --- LÓGICA 1: GALERÍA DE FOTOS (Para index.html) ---
    const botonFotos = document.getElementById('btn-fotos');
 const grillaFotos = document.getElementById('grid-fotos');
 
 if (botonFotos && grillaFotos) {
     botonFotos.onclick = function() {
         grillaFotos.classList.toggle('active');
-
+        // Opcional: Hacer scroll suave hacia la galería cuando se abra
         if(grillaFotos.classList.contains('active')) {
             setTimeout(() => {
                 grillaFotos.scrollIntoView({ behavior: 'smooth' });
@@ -16,11 +16,11 @@ if (botonFotos && grillaFotos) {
     };
 }
 
-
+    // --- LÓGICA 2: FILTROS DEL CRONOGRAMA (Para cronograma.html) ---
     const filterButtons = document.querySelectorAll('.filter-btn');
     const dayContainers = document.querySelectorAll('.schedule-day-container');
 
-
+    // Solo ejecutamos si existen botones de filtro en la página actual
     if (filterButtons.length > 0) {
         filterButtons.forEach(btn => {
             btn.addEventListener('click', () => {
@@ -90,7 +90,7 @@ if (overlay) {
     overlay.onclick = closeMenu;
 }
 
-// Lógica Slider de Fotos
+// Lógica 4: Slider de Fotos
 let currentSlide = 0;
 const slidesContainer = document.querySelector('.slides');
 const allSlides = document.querySelectorAll('.slides img');
