@@ -7,7 +7,7 @@ const grillaFotos = document.getElementById('grid-fotos');
 if (botonFotos && grillaFotos) {
     botonFotos.onclick = function() {
         grillaFotos.classList.toggle('active');
-        // Opcional: Hacer scroll suave hacia la galería cuando se abra
+        
         if(grillaFotos.classList.contains('active')) {
             setTimeout(() => {
                 grillaFotos.scrollIntoView({ behavior: 'smooth' });
@@ -125,7 +125,7 @@ if (slidesContainer && totalSlides > 0) {
     setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;
         updateSlider();
-    }, 5000);
+    }, 8000);
 }
 
 function startCountdown() {
