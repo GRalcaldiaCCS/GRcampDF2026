@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 :root {
     --deep-blue: #221E53;
     --purple-dark: #2F1F55;
@@ -66,13 +70,25 @@ body {
 .container {
     width: 95%;
     max-width: 500px;
-    margin: 30px auto;
-    margin: 20% auto;
     position: relative; 
-    padding-top: 60px;
     overflow: visible;
     z-index: 0;
     box-sizing: border-box;
+
+    display: flex;          
+    flex-direction: column; 
+    align-items: center; 
+
+    margin: 20px auto;   
+    padding-top: 20px;  
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        margin: 20% auto; 
+        padding-top: 60px; 
+    }
 }
 
 .btn {
@@ -361,8 +377,16 @@ body.menu-open {
 
 .slides img {
     min-width: 100%; 
-    height: 400px;
+    height: 250px;
     object-fit: cover;
+    object-position: center;
+    aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+    .slides img {
+        height: 400px; /* Larger height for tablets and desktops */
+    }
 }
 
 .main-titles {
@@ -632,7 +656,7 @@ body.menu-open {
 
 .time-unit small {
     font-size: 0.7rem;
-    color: var(--magenta); /* Usamos el magenta para las etiquetas */
+    color: var(--magenta); 
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 5px;
