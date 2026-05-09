@@ -155,3 +155,84 @@ function startCountdown() {
     }, 1000);
 }
 startCountdown();
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const buttons = document.querySelectorAll('.read-more-btn');
+
+    buttons.forEach(button => {
+        button.addEventListener('click', function() {
+            const textWrapper = this.previousElementSibling;
+            
+            if (textWrapper.classList.contains('collapsed')) {
+                textWrapper.classList.remove('collapsed');
+                textWrapper.style.maxHeight = textWrapper.scrollHeight + "px";
+                this.textContent = 'Leer menos';
+            } else {
+                textWrapper.classList.add('collapsed');
+                textWrapper.style.maxHeight = '100px';
+                this.textContent = 'Leer más';
+            }
+        });
+    });
+});
+
+// LÓGICA PARA MOSTRAR FOTOS
+let currentImages = [];
+let currentIndex = 0;
+
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+
+// 1. Open Lightbox and gather all images in that specific grid
+document.querySelectorAll('.news-media').forEach(grid => {
+    const images = Array.from(grid.querySelectorAll('img'));
+    
+    images.forEach((img, index) => {
+        img.onclick = () => {
+            currentImages = images; // Save the current grid's images
+            currentIndex = index;   // Start at the clicked image
+            showImage();
+        };
+    });
+});
+
+function showImage() {
+    lightbox.style.display = 'flex';
+    lightboxImg.src = currentImages[currentIndex].src;
+}
+
+// 2. Navigation Logic
+document.getElementById('next-btn').onclick = (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    showImage();
+};
+
+document.getElementById('prev-btn').onclick = (e) => {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    showImage();
+};
+
+// 3. Keyboard Navigation (Bonus)
+document.onkeydown = (e) => {
+    if (lightbox.style.display === 'flex') {
+        if (e.key === "ArrowRight") document.getElementById('next-btn').click();
+        if (e.key === "ArrowLeft") document.getElementById('prev-btn').click();
+        if (e.key === "Escape") lightbox.style.display = 'none';
+    }
+};
+
+// Close the lightbox when clicking the X
+document.querySelector('.close-lightbox').onclick = function() {
+    lightbox.style.display = 'none';
+};
+
+// Close the lightbox when clicking anywhere on the dark background
+lightbox.onclick = function(event) {
+    // This ensures clicking the image or the buttons doesn't close it
+    if (event.target === lightbox) {
+        lightbox.style.display = 'none';
+    }
+};

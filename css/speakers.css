@@ -1,0 +1,169 @@
+.speaker-card {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.speaker-trigger {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0;
+    gap: 20px; 
+}
+
+.speaker-trigger::-webkit-details-marker {
+    display: none; 
+}
+
+/* Image Mask */
+.speaker-visual {
+    flex: 0 0 85px; 
+    width: 85px;
+    min-width: 85px;
+    display: flex;
+    justify-content: center;
+}
+
+.speaker-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    object-fit: cover;
+    border: 2px solid var(--purple-dark);
+}
+
+/* Text info */
+.speaker-info {
+    flex: 1; 
+    min-width: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.speaker-name {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.speaker-role {
+    display: inline-block; 
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 12px;
+    border-radius: 50px; /* Pill shape */
+    margin: 8px 0;
+    
+   
+    background-color: rgba(142, 68, 173, 0.1); 
+    color: var(--purple-dark);
+    border: 1px solid rgba(142, 68, 173, 0.3);
+}
+
+.speaker-activity {
+    display: block;
+    width: 100%;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-top: 6px;
+    line-height: 1.4; 
+    word-wrap: break-word; 
+}
+
+.expand-icon {
+    flex: 0 0 20px; 
+    text-align: right;
+    color: #ddd;
+}
+
+.speaker-card {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    margin-bottom: 10px;
+    border-radius: 12px; /* Slight curve even when closed */
+}
+
+/* Open State Styling */
+.speaker-card[open] {
+    background: #ffffff;
+    padding: 0 20px;
+    border-color: transparent;
+    /* The Premium Shadow */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+    transform: translateY(-2px); 
+}
+
+.speaker-card[open] .expand-icon {
+    transform: rotate(45deg); 
+}
+
+.speaker-content {
+    padding-bottom: 30px;
+    animation: fadeIn 0.4s ease;
+}
+
+.speaker-bio {
+    line-height: 1.8; 
+    color: #444;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-align: justify; 
+    hyphens: auto;
+}
+
+.speaker-meta {
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-left: 3px solid var(--purple-dark);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.speaker-meta p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.speaker-social {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.social-icon {
+    width: 20px; /* Small and elegant */
+    height: 20px;
+    object-fit: contain;
+}
+
+.speaker-social a {
+    color: var(--text-main);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.speaker-social a:hover {
+    color: var(--purple-dark);
+}
+
+.social-divider {
+    color: #ccc;
+    font-size: 0.8rem;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

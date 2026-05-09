@@ -26,9 +26,12 @@
     <ul class="menu-links">
         <li><a href="index.html"><img src="assets/icons/home.png" alt="Inicio" class="menu-icon">Inicio</a></li>
         <li><a href="cronograma.html"> <img src="assets/icons/calendar.png" alt="Inicio" class="menu-icon">Cronograma</a></li>
+        <li><a href="speakers.html"> <img src="assets/icons/speaker.png" alt="Inicio" class="menu-icon">Ponentes</a></li>
+        <li><a href="reglas.html"> <img src="assets/icons/rules.png" alt="Inicio" class="menu-icon">Reglamentos y Condiciones</a></li>
         <li><a href="ubicacion.html"> <img src="assets/icons/location.png" alt="Inicio" class="menu-icon">Ubicación</a></li>
+        <li><a href="aliados.html"><img src="assets/icons/allies.png" alt="Inicio" class="menu-icon">Aliados</a></li>
         <li><a href="#fotos"><img src="assets/icons/camera.png" alt="Inicio" class="menu-icon">Fotos</a></li>
-        <li><a href="#news"><img src="assets/icons/news.png" alt="Inicio" class="menu-icon">Noticias/Anuncios</a></li>
+        <li><a href="news.html"><img src="assets/icons/news.png" alt="Inicio" class="menu-icon">Noticias/Anuncios</a></li>
         <li><a href="#faq"><img src="assets/icons/qa.png" alt="Inicio" class="menu-icon">Preguntas Frecuentes</a></li>
         <li><a href="#faq"><img src="assets/icons/instagram.png" alt="Inicio" class="menu-icon">Instagram</a></li>
         <li><a href="#debora"><img src="assets/icons/rg.png" alt="Inicio" class="menu-icon">Sobre Débora</a></li>
@@ -44,7 +47,10 @@
 <div class="menu-overlay" id="menu-overlay"></div>
     <main class="container">
 
-    <div class="" style="text-align: center;"><h1>Cronograma</h1></div>
+    <header class="section-header">
+        <img src="assets/icons/calendar.png" alt="News Icon" class="header-icon">
+        <h1 class="page-title">Cronograma</h1>
+    </header>
 
     <div class="day-selector">
         <button class="filter-btn active" data-target="day-lunes">Lunes 11</button>
@@ -54,85 +60,207 @@
         <button class="filter-btn" data-target="day-viernes">Viernes 15</button>
     </div>
 
+    <div class="schedule-legend">
+    <div class="legend-item">
+        <div class="period-box morning">M</div>
+        <div class="legend-text">
+            <span class="period-name">Mañana</span>
+            <span class="period-time">8:00 AM - 1:00 PM</span>
+        </div>
+    </div>
+    <div class="legend-item">
+        <div class="period-box afternoon">T</div>
+         <div class="legend-text">
+            <span class="period-name">Tarde</span>
+            <span class="period-time">1:00 PM - 6:00 PM</span>
+        </div>
+    </div>
+</div>
+
     <div class="schedule-wrapper">
 
     <!-- L U N E S -->
     
     <div id="day-lunes" class="schedule-day-container active">
+
         <div class="schedule-item">
-            <div class="time-col">08:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 1</span>
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 1</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
                 <h3>Calentamiento Corporal Coreografiado</h3>
-                <p>Calentando con ritmo (sin aparato), parte del programa "Aquecendo com ritmo" creado por Débora Falda. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador. </p>
+            </div>
+            <p>Calentando con ritmo <strong>(sin aparato)</strong>, parte del programa <strong>"Aquecendo com ritmo"</strong> creado por Débora Falda. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico. </p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 2</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
-
-        <div class="schedule-item">
-            <div class="time-col">10:30 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 2</span>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
                 <h3>Preparación Física</h3>
-                <p>Sesión de entrenamiento sistemático para mejorar y desarrollar las capacidades motoras (fuerza, resistencia, velocidad, flexibilidad) necesarias para la rítmica. </p>
+            </div>
+            <p>Sesión de entrenamiento sistemático para mejorar y desarrollar las capacidades motoras (fuerza, resistencia, velocidad, o flexibilidad). Se enfoca en fortalecer y estabilizar los grupos musculares que intervienen directamente en los objetivos o enfoques del día. </p>
+        </div>
+    </div>
+
+
+     <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 3</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
-
-        <div class="schedule-item">
-            <div class="time-col">11:30 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 3</span>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
                 <h3>Flexibilidad</h3>
-                <p>Sesión dedicada a la optimización del rango articular y la elongación muscular. Incluye ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas. </p>
             </div>
+             <p>Enfoque específico sobre esta capacidad motora. Sesión dedicada a la optimización del rango articular y la elongación muscular. Para entrenar esta capacidad se suelen realizar ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas.</p>
+            <p><strong>Flexibilidad Pasiva:</strong> es la que utiliza una fuerza externa (el propio peso, una compañera o el suelo) para alcanzar el límite del estiramiento. Es la base para ganar amplitud. </p>
+            <p><strong> Flexibilidad Activa:</strong> Es la más difícil y en la que se enfoca este programa. La gimnasta debe alcanzar y mantener esa amplitud usando solo su propia fuerza muscular.</p>
         </div>
+    </div>
 
-         <div class="schedule-item">
-            <div class="time-col">1:30 PM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 4</span>
-                <h3>Manejo de Cuerda </h3>
-                <p>Introducción y perfeccionamiento de los grupos técnicos del aparato: saltitos, escapadas, rotaciones y lanzamientos. Se trabaja la coordinación óculo-manual y el mantenimiento de la forma de la cuerda, evitando que pierda su tensión o toque el suelo de forma indebida.</p>
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                
+                <h3>Manejo de Cuerda</h3>
+                <img src="assets/icons/rope.png" alt="Cuerda" class="apparatus-icon">
+            </div>
+            <p>Metodología avanzada para la técnica de aparato con la Cuerda. Revisión y corrección sobre los grupos técnicos del aparato: saltitos, escapadas, rotaciones o lanzamientos. Se trabaja la coordinación óculo-manual y el mantenimiento de la forma de la cuerda, evitando que pierda su tensión o toque el suelo de forma indebida.</p>
+        </div>
+    </div>
     </div>
 
     <!-- M A R T E S -->
 
     <div id="day-martes" class="schedule-day-container">
-        <div class="schedule-item">
-            <div class="time-col">08:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 1</span>
-                <h3>Calentamiento Corporal Coreografiado (con aparato)</h3>
-                <p>Calentando con ritmo (CUERDA), parte del programa "Aquecendo com ritmo" creado por Débora Falda. Se prepara el cuerpo para el ejercicio físico empleando la cuerda en un contexto más animado y motivador.</p>
+         <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 1</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Calentamiento Corporal Coreografiado</h3>
+                <img src="assets/icons/rope.png" alt="Cuerda" class="apparatus-icon">
+            </div>
+            <p>Calentando con ritmo <strong>(CUERDA)</strong>, parte del programa <strong>"Aquecendo com ritmo"</strong> creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo de la CUERDA para activar la movilidad articular y la manipulación del aparato desde el inicio. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico. </p>
+        </div>
+    </div>
 
-        <div class="schedule-item">
-            <div class="time-col">09:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 2</span>
-                <h3>Ballet</h3>
-                <p>Introducción a los fundamentos de la danza clásica adaptados a la gimnasia. Se trabaja la postura, pies y la estética de brazos y manos.</p>
-            </div>
-        </div>
-
-        <div class="schedule-item">
-            <div class="time-col">10:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 3</span>
-                <h3>Flexibilidad</h3>
-                <p>Sesión dedicada a la optimización del rango articular y la elongación muscular. Incluye ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas.</p>
-            </div>
-        </div>
+        
 
          <div class="schedule-item">
-            <div class="time-col">11:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 4</span>
-                <h3>Manejo de Aro</h3>
-                <p>Estudio de los grupos técnicos fundamentales del aro: rotaciones sobre el cuerpo o el suelo, lanzamientos, capturas y pasos a través del aparato. Se enfatiza el plano correcto de movimiento para evitar vibraciones o desviaciones en la trayectoria del implemento.</p>
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 2</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Ballet</h3>
+                <img src="assets/icons/ballet.png" alt="Cuerda" class="apparatus-icon">
+            </div>
+            <p>Clase complementaria que revisa los fundamentos de la danza clásica adaptados a la gimnasia. Se suele trabajar la postura, pies y la estética de brazos y manos. Las gimnastas rítmicas aprenden nociones de ballet porque constituye la base técnica fundamental para lograr la elegancia, postura y el control corporal necesario en este deporte. El ballet ayuda a transformar la fuerza física en movimientos artísticos y fluidos, mejorando la proyección escénica y la ejecución técnica de los elementos.</p>
+        </div>
+    </div>
+
+        <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 3</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Flexibilidad</h3>
+            </div>
+            <p>Enfoque específico sobre esta capacidad motora. Sesión dedicada a la optimización del rango articular y la elongación muscular. Para entrenar esta capacidad se suelen realizar ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas.</p>
+            <p><strong>Flexibilidad Pasiva:</strong> es la que utiliza una fuerza externa (el propio peso, una compañera o el suelo) para alcanzar el límite del estiramiento. Es la base para ganar amplitud. </p>
+            <p><strong> Flexibilidad Activa:</strong> Es la más difícil y en la que se enfoca este programa. La gimnasta debe alcanzar y mantener esa amplitud usando solo su propia fuerza muscular.</p>
+        </div>
+    </div>
+
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/galeria/webp/johana_dancer.webp" alt="Johana Viloria" class="tag-avatar">
+                <span class="category">JOHANA VILORIA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Expresión Corporal con Johana's Dance Academy</h3>
+            </div>
+            <p>La expresión corporal se enfoca en <strong>'humanizar'</strong> el movimiento para transformar cada rutina en una historia contada a través del cuerpo. Este arte lo conoce y domina a la perfección Johana Viloria, fundadora y directora de la reconocida academia capitalina de bailarines integrales Johana's Dance. Con su charla, <strong>Johana's Dance “Emotion in Motion”</strong>, Viloria nos enseñará que la gimnasta no solo debe ejecutar, sino también comunicar;  debe proyectar la energía de sus movimientos a sus espectadores para crear presentaciones emotivas de impacto.
+            <p><strong>Descubre más sobre su trayectoria y enfoque en nuestra sección de <a href="speakers.html">PONENTES</a>.</strong></p>
+        </div>
+    </div>
+
+            
         </div>
 
     </div>
@@ -141,135 +269,353 @@
 
     <div id="day-miercoles" class="schedule-day-container">
         <div class="schedule-item">
-            <div class="time-col">08:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 1</span>
-                <h3>Calentamiento Corporal Coreografiado (ARO)</h3>
-                <p>Calentando con ritmo, parte del programa "Aquecendo com ritmo" creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo del aro para activar la movilidad articular y la manipulación del aparato desde el inicio. Todo en un contexto animado y motivador.</p>
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 1</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
-
-        <div class="schedule-item">
-            <div class="time-col">09:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 2</span>
-                <h3>Preparación Física</h3>
-                <p>Ejercicios diseñados para fortalecer los grupos musculares que intervienen directamente en las dificultades del día.</p>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
             </div>
-        </div>
-
-        <div class="schedule-item">
-            <div class="time-col">10:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 3</span>
-                <h3>Manejo de Pelota</h3>
-                <p>Trabajo de los elementos fundamentales del aparato: rebotes, rodamientos sobre el cuerpo o el suelo, lanzamientos y capturas. </p>
+            <div class="title-with-icon">
+                <h3>Calentamiento Corporal Coreografiado</h3>
+                <img src="assets/icons/hoop.png" alt="Aro" class="apparatus-icon">
             </div>
-        </div>
-
-        <div class="schedule-item">
-            <div class="time-col">11:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 4</span>
-                <h3>Preparación Física General</h3>
-                <p>Sesión que busca el desarrollo integral del atleta. Incluye ejercicios de resistencia cardiovascular, fortalecimiento global y movilidad general para mejorar la condición atlética base y prevenir lesiones por sobreuso. </p>
-            </div>
+            <p>Calentando con ritmo <strong>(ARO)</strong>, parte del programa <strong>"Aquecendo com ritmo"</strong> creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo del ARO para activar la movilidad articular y la manipulación del aparato desde el inicio. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico.</p>
         </div>
     </div>
+
+
+        <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 2</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Preparación Física</h3>
+            </div>
+            <p>Sesión de entrenamiento diseñada para mejorar la potencia atlética específica. Se centra en acondicionar los grupos musculares que intervienen directamente en las dificultades o enfoques del día. Esta sesión del programa busca el el desarrollo de capacidades motoras: potencia, flexibilidad y resistencia.</p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 3</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Manejo de Aparato </h3>
+                <img src="assets/icons/ball.png" alt="Pelota" class="apparatus-icon">
+            </div>
+            <p>Metodología avanzada para la técnica de aparato con la pelota. Trabajo de los elementos fundamentales del aparato: rebotes, rodamientos sobre el cuerpo o el suelo, lanzamientos y capturas. </p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Preparación Física General</h3>
+            </div>
+            <p>Sesión que busca el desarrollo integral del atleta. Incluye ejercicios de resistencia cardiovascular, fortalecimiento global y movilidad general para mejorar la condición atlética base y prevenir lesiones por sobreuso. </p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/galeria/webp/andreina_sanchez.webp" alt="Débora Falda" class="tag-avatar">
+                <span class="category">Panel de Nutricionistas</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Charla: Nutrición: Equilibrio Real</h3>
+            </div>
+            <p>Recibimos a un panel de nutricionistas clínicos de sólida trayectoria; conócelos en la sección <strong><a href="speakers.html">PONENTES</a></strong> Las charlas de nutrición del campamamento están pensadas para enseñar a las gimnastas a ver la alimentación como su mejor herramienta de rendimiento. La charla se centra en la educación nutricional para que cada atleta aprenda a nutrir su cuerpo de forma inteligente, asegurando que tenga la energía   y la claridad mental necesaria que exige la disciplina.</p>
+            <p><strong>¿Por qué es vital en nuestro campamento?</p></strong>
+            <p>Entendemos que la gimnasia rítmica es un deporte de alta exigencia metabólica y estética; si no se aborda de manera integral, la gimnasta corre el riesgo de comprometer su salud física y mental, y por ende, su vida y carrera deportiva. Nuestra intención es ofrecer oportunidad de educación para formar atletas fuertes, conscientes y equilibradas. Queremos fomentar en el atleta una relación saludable, inteligente y consciente con la comida, entendiéndola como la base de su salud, su potencial y longevidad en el deporte.</p>
+            
+        </div>
+    </div>
+    </div>
+    
+
     <!-- J U E V E S -->
 
     <div id="day-jueves" class="schedule-day-container">
         <div class="schedule-item">
-            <div class="time-col">08:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 1</span>
-                <h3>Calentamiento Corporal Coreografiado (MAZAS)</h3>
-                <p>Calentando con ritmo (MAZAS), parte del programa "Aquecendo com ritmo" creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo del aro para activar la movilidad articular y la manipulación de las MAZAS desde el inicio. Todo en un contexto animado y motivador.</p>
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 1</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Calentamiento Corporal Coreografiado</h3>
+                <img src="assets/icons/ball.png" alt="Mazas" class="apparatus-icon">
+            </div>
+            <p>Calentando con ritmo <strong>(PELOTA)</strong>, parte del programa <strong>"Aquecendo com ritmo"</strong> creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo del aparato para activar la movilidad articular y la manipulación de la PELOTA desde el inicio. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico. </p>
+        </div>
+    </div>
 
-        <div class="schedule-item">
-            <div class="time-col">09:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 2</span>
-                <h3>Preparación Física</h3>
-                <p>Ejercicios diseñados para fortalecer y estabilizar los grupos musculares que intervienen directamente en las dificultades del día.</p>
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 2</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Ballet</h3>
+                <img src="assets/icons/ballet.png" alt="Cuerda" class="apparatus-icon">
+            </div>
+            <p>Segunda clase complementaria de Ballet para continuar revisando los fundamentos de la danza clásica adaptados a la gimnasia. Se suele trabajar la postura, pies y la estética de brazos y manos. Las gimnastas rítmicas aprenden nociones de ballet porque constituye la base técnica fundamental para lograr la elegancia, postura y el control corporal necesario en este deporte. El ballet ayuda a transformar la fuerza física en movimientos artísticos y fluidos, mejorando la proyección escénica y la ejecución técnica de los elementos.</p>
+        </div>
+    </div>
 
-        <div class="schedule-item">
-            <div class="time-col">10:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 3</span>
-                <h3>Manejo de Cinta</h3>
-                <p>Estudio de los grupos técnicos fundamentales: serpentinas, espirales, lanzamientos y dibujos en el aire. El enfoque principal es mantener la cinta en movimiento constante y con la forma correcta, evitando que el extremo toque el suelo o se enrede en el cuerpo de la gimnasta. </p>
-            </div>
-        </div>
 
-        <div class="schedule-item">
-            <div class="time-col">11:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 4</span>
-                <h3>Preparación Física General</h3>
-                <p>Sesión que busca el desarrollo integral del atleta. Incluye ejercicios de resistencia cardiovascular, fortalecimiento global y movilidad general para mejorar la condición atlética base y prevenir lesiones por sobreuso. </p>
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 3</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Flexibilidad</h3>
+            </div>
+            <p>Sesión dedicada a la optimización del rango articular y la elongación muscular. Para entrenar esta capacidad se suelen realizar ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas.</p>
+            <p><strong>Flexibilidad Pasiva:</strong> es la que utiliza una fuerza externa (el propio peso, una compañera o el suelo) para alcanzar el límite del estiramiento. Es la base para ganar amplitud. </p>
+            <p><strong> Flexibilidad Activa:</strong> Es la más difícil y es el enfoque de este programa. La gimnasta debe alcanzar y mantener esa amplitud usando solo su propia fuerza muscular.</p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Manejo de Aparato </h3>
+                <img src="assets/icons/clubs-black.png" alt="Mazas" class="apparatus-icon">
+            </div>
+            <p>Metodología avanzada para la técnica de aparato con las mazas. Estudio de los grupos técnicos específicos como molinetes, pequeños círculos, lanzamientos, etc. </p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 5</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/galeria/webp/dario_ortega.webp" alt="Darío Ortega" class="tag-avatar">
+                <span class="category">DARÍO J. ORTEGA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Mental Coaching</h3>
+                <img src="assets/icons/brain-organ.png" alt="Mental Coach" class="apparatus-icon">
+            </div>
+            <p>El alto rendimiento deportivo se halla en la configuración mental del atleta. La fortaleza mental no es un rasgo fijo, sino una capacidad que se entrena y que determina cómo un atleta gestiona la presión, interpreta los errores y las victorias, y cómo mantiene la constancia en su preparación y rendimiento procurando su bienestar psicológico y físico. Para profundizar en este desafío, recibimos al <strong>Dr. Darío Ortega</strong>, un referente del entrenamiento mental con más de dos décadas de experiencia forjando la mentalidad de campeones en el deporte profesional. Conocido por su impacto en equipos de élite como los Navegantes del Magallanes y su labor con diversas selecciones nacionales e internacionales, Ortega llega para presentar su charla: <strong>"El ABC de la Mentalidad para el Alto Rendimiento en la Gimnasia Rítmica".  </strong></p>
+            <p><strong>Descubre más sobre su trayectoria y enfoque en nuestra sección de <a href="speakers.html">PONENTES</a>.</strong></p>
+        </div>
+    </div>
     </div>
 
     <!-- VIERNES -->
 
     <div id="day-viernes" class="schedule-day-container">
-
-
-        <div class="schedule-item">
-            <div class="time-col">08:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 1</span>
-                <h3>Calentamiento Corporal Coreografiado (CINTA) </h3>
-                <p>Calentando con ritmo (CINTA), parte del programa "Aquecendo com ritmo" creado por Débora Falda. Sesión de activación al ritmo de la música que integra el dibujo de espirales y serpentinas, preparando la articulación del hombro y la muñeca para el manejo continuo del aparato.</p>
+         <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 1</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
             </div>
         </div>
-
-        <div class="schedule-item">
-            <div class="time-col">09:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 2</span>
-                <h3>Ballet </h3>
-                <p>Más fundamentos de danza clásica adaptados a la gimnasia rítmica.</p>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
             </div>
-        </div>
-
-          <div class="schedule-item">
-            <div class="time-col">10:00 AM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 3</span>
-                <h3>Flexibilidad</h3>
-                <p>Sesión dedicada a la optimización del rango articular y la elongación muscular. Incluye ejercicios de flexibilidad activa y pasiva orientados a mejorar las líneas estéticas.</p>
+            <div class="title-with-icon">
+                <h3>Calentamiento Corporal Coreografiado</h3>
+                <img src="assets/icons/clubs-black.png" alt="Mazas" class="apparatus-icon">
             </div>
-        </div>
-
-
-        <div class="schedule-item">
-            <div class="time-col">02:00 PM</div>
-            <div class="activity-col">
-                <span class="category">Actividad 4</span>
-                <h3>Confraternización y Fotos </h3>
-                <p>Parabéns meninas! Espacio de cierre del campamento diseñado para fortalecer los lazos entre gimnastas y Débora. Incluye la entrega de certificados, captura de fotografías oficiales y momentos para compartir experiencias, celebrando el esfuerzo realizado durante todo el evento.</p>
-            </div>
+            <p>Calentando con ritmo (MAZAS), parte del programa "Aquecendo com ritmo" creado por Débora Falda. Consiste en una sesión de calentamiento al ritmo de la música, integrando el manejo del aparato para activar la movilidad articular y la manipulación de las MAZAS desde el inicio. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico. </p>
         </div>
     </div>
 
-       <div style="text-align: center; margin: 20px 0;">
-    <a href="assets/programa_campamento.pdf" download class="btn-download btn-download-flex">
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 2</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Preparación Física</h3>
+            </div>
+            <p>Sesión de entrenamiento diseñada para mejorar la potencia atlética específica. Se centra en acondicionar los grupos musculares que intervienen directamente en las dificultades del día. Se busca el desarrollo de potencia, flexibilidad y resistencia.</p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 3</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Manejo de Aparato </h3>
+                <img src="assets/icons/ribbon-black.png" alt="Cinta" class="apparatus-icon">
+            </div>
+            <p> Estudio de los grupos técnicos fundamentales: serpentinas, espirales, lanzamientos y dibujos en el aire. El enfoque principal es mantener la cinta en movimiento constante y con la forma correcta, evitando que el extremo toque el suelo o se enrede en el cuerpo de la gimnasta.</p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Calentamiento Corporal Coreografiado</h3>
+                <img src="assets/icons/ribbon-black.png" alt="Cinta" class="apparatus-icon">
+            </div>
+            <p>Calentando con ritmo (CINTA), parte del programa <strong>"Aquecendo com ritmo"</strong> creado por Débora Falda. Sesión de activación al ritmo de la música que integra el dibujo de espirales y serpentinas, preparando la articulación del hombro y la muñeca para el manejo continuo del aparato. Se prepara el cuerpo para el ejercicio físico en un contexto más animado y motivador que busca estimular la memoria coreográfica y optimizar el tiempo de entrenamiento haciendo que el calentamiento sea más dinámico y técnico.</p>
+        </div>
+    </div>
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <span class="category">DÉBORA FALDA</span>
+                <img src="assets/logo_alcaldiaccs.png" alt="Club GR Alcaldía de Caracas" class="tag-avatar">
+                <span class="category">Organizador</span>
+            </div>
+            <div class="title-with-icon">
+                <h3>Confraternización y Fotos</h3>
+                <img src="assets/icons/trophy.png" alt="Trofeo" class="apparatus-icon">
+                <img src="assets/icons/camera.png" alt="Cámara" class="apparatus-icon">
+            </div>
+            <p><strong>Parabéns meninas!</strong> Espacio de cierre del campamento diseñado para fortalecer los lazos entre gimnastas y Débora. Incluye la entrega de certificados, captura de fotografías oficiales y momentos para compartir experiencias, celebrando el esfuerzo realizado durante todo el evento.</p>
+        </div>
+    </div>
+       
+    </div>
+
+       <!--<div style="text-align: center; margin: 20px 0;">
+     VIERNES <a href="#ProgramaCampamento" download class="btn-download btn-download-flex">
         <img src="assets/icons/download.png" alt="Descargar" class="btn-icon">
         <span>Descargar Cronograma en PDF</span>
     </a>
-</div>
+</div>-->
 
-    <a href="index.html" class="btn btn-alt"> <img src="assets/icons/left-arrow.png" alt="Inicio" class="menu-icon-arrow">VOLVER AL INICIO</a>
-    <script src="js/script.js"></script>
 
-     <footer>
+    <div class="back-home-wrapper">
+    <a href="index.html" class="btn-back-home">
+        <img src="assets/icons/left-arrow.png" alt="Back" class="back-icon">
+        <span>INICIO</span>
+    </a>
+</div> 
+
+<footer>
         <p>&copy; Escuela de Gimnasia Rítmica Alcaldía de Caracas </p>
         <a href="https://maps.app.goo.gl/v8vh84R9nfTWKJ5R6" target="_blank" style="text-decoration: none; color: inherit;">
    <address>
@@ -280,5 +626,8 @@
 <img src="assets/autorizados_logos.png" alt="Campamento Autorizado por la FVG" class="autorizados-logos">
     </footer>
 </main>
+
+
+    <script src="js/script.js"></script>
 </body>
 </html>

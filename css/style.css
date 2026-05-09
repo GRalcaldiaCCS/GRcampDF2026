@@ -8,7 +8,7 @@
     --magenta: #802A8C;
     --white: #ffffff;
     --light-gray: #f8f9fa;
-
+    --text-main: #2c3e50; 
     --brazil-green: #009C3B;
     --brazil-yellow: #FEDD00;
 }
@@ -42,7 +42,30 @@ body {
     width: 100%;
     overflow: hidden;
 
+}.section-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
 }
+
+.header-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.page-title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--header-text);
+    margin: 0;
+}
+
+
 
 .banner-img {
     width: 100%;        
@@ -385,7 +408,7 @@ body.menu-open {
 
 @media (min-width: 768px) {
     .slides img {
-        height: 400px; /* Larger height for tablets and desktops */
+        height: 400px; 
     }
 }
 
@@ -566,7 +589,7 @@ body.menu-open {
 }
 
 
-.item-1, .item-4, .item-5, .item-7 { 
+.item-1, .item-4, .item-5, .item-8 { 
     background: linear-gradient(135deg, var(--deep-blue) 0%, var(--magenta) 100%);
 }
 .item-2, .item-3, .item-6, .item-7 {
@@ -663,6 +686,54 @@ body.menu-open {
 }
 
 .autorizados-logos{
-    width: 15%;
-    height: 15%;
+    width: 40%;
+    height: 40%;
+}
+
+.back-home-wrapper {
+    margin: 80px 0 40px; /* Large gap from the last news entry */
+    display: flex;
+    justify-content: center; /* Centers the button on the page */
+}
+
+.btn-back-home {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 12px 25px;
+    border: 1.5px solid var(--text-main); /* Thin, elegant border */
+    border-radius: 30px; /* Rounded pill shape */
+    transition: all 0.3s ease;
+    
+    /* Text Style */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    color: var(--text-main);
+}
+
+.back-icon {
+    width: 20px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect - Atmospheric & Elegant */
+.btn-back-home:hover {
+    background-color: var(--text-main, #2c3e50); /* Added a fallback color */
+    border-color: var(--text-main, #2c3e50);
+}
+
+.btn-back-home:hover span {
+    color: #ffffff !important; /* Forces the text to stay white against the dark bg */
+}
+
+.btn-back-home:hover .back-icon {
+    filter: brightness(0) invert(1); /* Turns the icon white */
+}
+
+.main-footer{
+   margin-top: 60px;
 }

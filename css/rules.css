@@ -1,0 +1,161 @@
+.rules-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Una columna en móvil */
+    gap: 20px;
+    margin-top: 30px;
+}
+
+@media (min-width: 768px) {
+    .rules-grid {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en desktop */
+    }
+}
+
+.info-card {
+    background: #fff;
+    border-radius: 15px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f8f8f8;
+    padding-bottom: 10px;
+}
+
+.card-header h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--purple-dark);
+    margin: 0;
+}
+
+
+.shift-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.shift-item {
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.morning-bg { background: #fff9db; border: 1px solid #fcc419; color: #946c00; }
+.afternoon-bg { background: #fff4e6; border: 1px solid #ff922b; color: #d9480f; }
+
+/* Lista de materiales */
+.material-list {
+    list-style: none;
+    padding: 0;
+}
+
+.material-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.material-list li::before {
+    content: '•';
+    color: var(--purple-dark);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.alert-text {
+    background: #fdf2f2;
+    padding: 15px;
+    border-left: 4px solid #e03131;
+    border-radius: 4px;
+    color: #c92a2a;
+    font-size: 0.95rem;
+}
+
+
+.channel-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.channel-btn {
+    display: block;
+    padding: 10px;
+    text-align: center;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--text-main);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    transition: all 0.3s ease;
+}
+
+.channel-btn:hover {
+    background: var(--purple-dark);
+    color: white;
+    border-color: var(--purple-dark);
+}
+
+
+.parent-card {
+    background: linear-gradient(to bottom right, #ffffff, #faf5ff);
+    border: 1px solid #e9d8fd;
+}
+
+.parent-reminders {
+    list-style: none;
+    padding: 0;
+}
+
+.parent-reminders li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #e2e8f0;
+    font-size: 0.9rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.parent-reminders li:last-child {
+    border-bottom: none;
+}
+
+.card-icon-small {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.rules-icon{
+
+    width: 28px;        
+    height: 28px;
+    object-fit: contain;
+
+}
+
