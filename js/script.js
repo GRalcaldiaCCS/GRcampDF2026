@@ -239,4 +239,3 @@ lightbox.onclick = function(event) {
     }
 };
 
-

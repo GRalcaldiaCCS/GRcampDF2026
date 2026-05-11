@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/livetracker.css">
+    <link rel="stylesheet" href="css/toast.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -249,10 +251,10 @@
 
 <div id="welcome-modal" class="modal-overlay">
     <div class="modal-container">
-        <!-- Close Button (X) -->
+    
         <span class="close-modal" id="close-welcome">&times;</span>
         
-        <!-- The 1080x1350 WebP Image -->
+       
         <img src="assets/galeria/webp/welcome.webp" alt="Bienvenido al Campamento" class="welcome-image">
     </div>
 </div>
@@ -263,13 +265,13 @@
             var modal = document.getElementById('welcome-modal');
             var closeBtn = document.getElementById('close-welcome');
 
-            // 1. CHECK: If the user has seen it in this session, STOP here.
+
             if (sessionStorage.getItem('welcomeShown')) {
                 modal.style.display = 'none';
                 return; 
             }
 
-            // 2. SHOW: If they haven't seen it, show it.
+
             modal.classList.add('active');
 
             var closeModal = function() {
@@ -278,7 +280,7 @@
                     modal.style.display = 'none';
                 }, 500);
                 
-                // 3. SAVE: Set the flag so it doesn't show again.
+          
                 sessionStorage.setItem('welcomeShown', 'true');
             };
 
@@ -289,7 +291,54 @@
         });
     })();
 </script>
+<div id="toast-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 99999; display: flex; flex-direction: column; gap: 10px; pointer-events: none;"></div>
 
+
+<script>
+    function showToast(message) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        
+     
+        toast.style.background = "rgba(45, 52, 54, 0.98)";
+        toast.style.color = "white";
+        toast.style.padding = "16px 24px";
+        toast.style.borderRadius = "12px";
+        toast.style.fontFamily = "'Montserrat', sans-serif";
+        toast.style.fontSize = "0.9rem";
+        toast.style.fontWeight = "600";
+        toast.style.boxShadow = "0 10px 30px rgba(0,0,0,0.3)";
+        toast.style.display = "flex";
+        toast.style.alignItems = "center";
+        toast.style.gap = "12px";
+        toast.style.borderLeft = "5px solid #8e44ad"; 
+        toast.style.transition = "all 0.5s ease";
+        toast.style.transform = "translateX(-120%)";
+        toast.style.pointerEvents = "auto";
+
+        toast.innerHTML = `<span>🔔</span> <span>${message}</span>`;
+        container.appendChild(toast);
+
+       
+        setTimeout(() => {
+            toast.style.transform = "translateX(0)";
+        }, 100);
+
+       
+        setTimeout(() => {
+            toast.style.transform = "translateX(-120%)";
+            setTimeout(() => toast.remove(), 500);
+        }, 5000);
+    }
+
+  
+    window.addEventListener('load', function() {
+        console.log("Toast system initialized"); //
+        setTimeout(() => {
+            showToast("¡Iniciamos Día 1!");
+        }, 8000); 
+    });
+</script>
 
     <script src="js/script.js"></script>
 </body>
