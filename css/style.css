@@ -737,3 +737,57 @@ body.menu-open {
 .main-footer{
    margin-top: 60px;
 }
+
+/* Contenedor de cada slide */
+.slide-item {
+    min-width: 100%;
+    position: relative; /* Importante para posicionar el botón */
+    height: 400px; /* Tu altura de escritorio */
+}
+
+.slide-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* El botón sobre la imagen */
+.slide-overlay {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.slide-btn {
+    display: inline-block;
+    background: #ffffff;
+    color: var(--purple-dark);
+    padding: 12px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.slide-btn:hover {
+    background: var(--purple-dark);
+    color: white;
+    transform: translateX(-50%) scale(1.05); /* Mantiene el centro y crece un poco */
+}
+
+/* Ajuste móvil */
+@media (max-width: 600px) {
+    .slide-item {
+        height: 250px; /* Tu altura móvil */
+    }
+    .slide-btn {
+        padding: 10px 20px;
+        font-size: 0.7rem;
+    }
+}

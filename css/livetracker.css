@@ -1,0 +1,201 @@
+.live-tracker-container {
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+    margin: 20px auto;
+    text-align: center;
+    width: 100%;
+}
+
+.tracker-title {
+    display: flex;
+    flex-direction: column; /* Alinea los textos verticalmente */
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: var(--purple-dark);
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.portuguese-subtitle {
+    font-family: 'Playfair Display', serif; /* Usamos la serif para elegancia */
+    font-style: italic;
+    font-size: 1.2rem; /* Más pequeño */
+    font-weight: 400;
+    text-transform: none; /* Quita las mayúsculas */
+    color: var(--purple-dark);
+    margin-top: 5px; /* Lo acerca al título principal */
+    letter-spacing: 0px; /* Estilo natural de escritura */
+}
+
+.progress-bar-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    max-width: 100%;
+    padding: 0 10px;
+}
+
+/* La línea gris de fondo */
+.progress-line {
+    position: absolute;
+    top: 15px; /* Centrada con los círculos */
+    left: 10px;
+    right: 10px;
+    height: 6px;
+    background: #e0e0e0;
+    z-index: 1;
+}
+
+.day-segment {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+/* El círculo del marcador */
+.status-marker {
+    width: 45px;
+    height: 45px;
+    background: #fff;
+    border: 4px solid #e0e0e0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    transition: all 0.4s ease;
+     font-size: 1.2rem; /
+}
+
+.day-label {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #999;
+}
+
+/* --- ESTADO: COMPLETADO (VERDE) --- */
+.day-segment.completed .status-marker {
+    background: #009C3B; 
+    border-color: #2ecc71;
+}
+
+.day-segment.completed .check-icon {
+    color: white;
+    font-weight: bold;
+    display: block;
+}
+
+.day-segment.completed .day-label {
+    color: #2ecc71;
+}
+
+/* --- ESTADO: ACTIVO (PULSO VIVO) --- */
+.day-segment.active .status-marker {
+    border-color: var(--purple-dark);
+    position: relative;
+}
+
+.day-segment.active .day-label {
+    color: var(--purple-dark);
+}
+
+.day-segment.active .day-label small {
+    display: block;
+    font-size: 0.6rem;
+    color: #e74c3c; /* Rojo alerta */
+    animation: blink 1s infinite;
+}
+
+/* EFECTO DE PULSO (OLYMPIC STYLE) */
+.pulse-dot {
+    width: 18px;
+    height: 18px;
+    background: #802A8C;
+    border-radius: 50%;
+    position: relative;
+}
+
+.pulse-dot::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: #802A8C;
+    border-radius: 50%;
+    animation: pulse-animation 1.5s infinite;
+    opacity: 0.6;
+}
+
+@keyframes pulse-animation {
+    0% { width: 12px; height: 12px; opacity: 0.6; }
+    100% { width: 40px; height: 40px; opacity: 0; }
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.day-segment a {
+  text-decoration: none;
+  color: inherit;        
+      
+}
+
+/* Contenedor del link para que todo el bloque sea clicleable */
+.tracker-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* La etiqueta del día (Badge) */
+.day-badge {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 0.8rem;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #f0f0f0; /* Gris suave por defecto */
+    color: #888;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+/* Cuando el día está completado */
+.completed .day-badge {
+    background: rgba(46, 204, 113, 0.15); /* Verde suave */
+    color: #27ae60;
+}
+
+/* Cuando el día está ACTIVO (El que más resalta) */
+.active .day-badge {
+    background: var(--purple-dark);
+    color: white;
+    box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
+    transform: scale(1.1); /* Lo hace un poco más grande */
+}
+
+/* Texto de "EN VIVO" */
+.live-text {
+    display: block;
+    font-size: 0.6rem;
+    font-weight: 900;
+    color: #e74c3c;
+    margin-top: 4px;
+    letter-spacing: 1px;
+    animation: blink 1s infinite;
+}
+

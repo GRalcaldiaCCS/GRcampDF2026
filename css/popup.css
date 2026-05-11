@@ -1,0 +1,57 @@
+.modal-overlay {
+        display: none; /* Hidden by default */
+        position: fixed;
+        z-index: 10000; /* Extremely high to stay above everything */
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.85); /* Premium dark background */
+        backdrop-filter: blur(8px); /* Modern blur effect */
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.5s ease;
+    }
+
+    /* When this class is added, the modal fades in */
+    .modal-overlay.active {
+        display: flex;
+        opacity: 1;
+    }
+
+    .modal-container {
+        position: relative;
+        width: 90%;
+        max-width: 420px; /* Perfect size for a 1080x1350 portrait image */
+        animation: modalEntry 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .welcome-image {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        display: block;
+        border: 2px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .close-modal {
+        position: absolute;
+        top: -45px;
+        right: 0;
+        color: #ffffff;
+        font-size: 40px;
+        cursor: pointer;
+        line-height: 1;
+        transition: transform 0.3s ease;
+    }
+
+    .close-modal:hover {
+        transform: scale(1.2);
+    }
+
+    @keyframes modalEntry {
+        from { opacity: 0; transform: scale(0.8) translateY(20px); }
+        to { opacity: 1; transform: scale(1) translateY(0); }
+    }

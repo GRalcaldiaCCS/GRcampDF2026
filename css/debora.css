@@ -1,0 +1,196 @@
+/* Hero Profile Styles */
+.speaker-profile-hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid var(--purple-dark);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.profile-main-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.highlight-text {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--purple-dark);
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+/* --- THE MODERN TABLE --- */
+.table-responsive {
+    overflow-x: auto;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.modern-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    font-size: 0.9rem;
+}
+
+.modern-table thead {
+    background: var(--purple-dark);
+    color: white;
+}
+
+.modern-table th, .modern-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.modern-table tbody tr:hover {
+    background-color: #f9f6ff;
+}
+
+/* Innovation Cards */
+.innovation-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .innovation-grid { grid-template-columns: 1fr 1fr; }
+}
+
+.info-card {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #ddd;
+}
+
+.info-card.accent {
+    border-left-color: var(--purple-dark);
+    background: #f9f6ff;
+}
+
+.info-card h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    color: var(--purple-dark);
+}
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+}
+
+.clean-list li {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.experience-section {
+    margin: 40px 0;
+}
+
+.section-intro {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.countries-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* 1 columna en móvil */
+    gap: 15px;
+}
+
+@media (min-width: 600px) {
+    .countries-grid {
+        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas más grandes */
+    }
+}
+
+.country-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    background: #fdfdfd;
+    border-radius: 10px;
+    border: 1px solid #f0f0f0;
+}
+
+.flag {
+    font-size: 1.5rem;
+}
+
+.country-details strong {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--purple-dark);
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.country-details p {
+    font-size: 0.85rem;
+    margin: 0;
+    color: #555;
+    line-height: 1.4;
+}
+
+.extra-info {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 15px;
+    background: #f9f6ff;
+    border-radius: 8px;
+    color: #444;
+}
+
+.profile-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    margin: 10px 0;
+    padding: 5px 12px;
+    background: rgba(0, 0, 0, 0.03); /* Fondo muy sutil */
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.profile-social span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--text-main);
+}
+
+.social-icon-small {
+    width: 18px; /* Tamaño discreto y pro */
+    height: 18px;
+    object-fit: contain;
+}
+
+.profile-social:hover {
+    background: rgba(142, 68, 173, 0.1); /* Efecto hover con tu morado */
+    transform: translateY(-2px);
+}
+
+.profile-social:hover span {
+    color: var(--purple-dark);
+}
+
+
+

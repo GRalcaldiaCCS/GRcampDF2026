@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GR Training Camp 2026 | Débora Falda</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="stylesheet" href="css/livetracker.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -48,12 +50,12 @@
         <li><a href="news.html"><img src="assets/icons/news.png" alt="Inicio" class="menu-icon">Noticias/Anuncios</a></li>
         <li><a href="#faq"><img src="assets/icons/qa.png" alt="Inicio" class="menu-icon">Preguntas Frecuentes</a></li>
         <li><a href="#faq"><img src="assets/icons/instagram.png" alt="Inicio" class="menu-icon">Instagram</a></li>
-        <li><a href="#debora"><img src="assets/icons/rg.png" alt="Inicio" class="menu-icon">Sobre Débora</a></li>
+        <li><a href="debora.html"><img src="assets/icons/rg.png" alt="Inicio" class="menu-icon">Sobre Débora</a></li>
         <li><a href="#escuela"><img src="assets/icons/logo-alcaldia.jpg" alt="Inicio" class="menu-icon-special">Sobre el Club</a></li>
     </ul>
 </nav>
     
-<div class="countdown-container">
+<!-- <div class="countdown-container">
     <h2 class="countdown-title"> F A L T A N</h2>
     <div id="countdown" class="countdown-timer">
         <div class="time-unit">
@@ -74,20 +76,101 @@
         </div>
     </div>
 </div>
+-->
+
+<section class="live-tracker-container">
+    <h2 class="tracker-title">Estado del Campamento
+        <span class="portuguese-subtitle">Status do Acampamento</span>
+    </h2>
+    
+    
+    <div class="progress-bar-wrapper">
+        <!-- DÍA 1 "day-segment completed"✓-->
+        <div class="day-segment active">
+    <a href="cronograma.html" class="tracker-link">
+        <div class="status-marker">
+            <div class="pulse-dot"></div>
+        </div>
+        <span class="day-badge">Día 1</span>
+        <!--<small class="live-text">EN VIVO</small>-->
+    </a>
+</div>
+
+        <!-- DÍA 2 -->
+        <div class="day-segment">
+            <div class="status-marker"></div>
+            <span class="day-label">Día 2</span>
+        </div>
+
+        <!-- DÍA 3 -->
+        <div class="day-segment">
+            <div class="status-marker"></div>
+            <span class="day-label">Día 3</span>
+        </div>
+
+        <!-- DÍA 4 -->
+        <div class="day-segment">
+            <div class="status-marker"></div>
+            <span class="day-label">Día 4</span>
+        </div>
+
+        <!-- DÍA 5 -->
+        <div class="day-segment">
+            <div class="status-marker"></div>
+            <span class="day-label">Día 5</span>
+        </div>
+        
+        <!-- Línea de fondo -->
+        <div class="progress-line"></div>
+    </div>
+</section>
+
 
 <section class="hero-slider-container">
     <div class="slider">
         <div class="slides">
-            <img src="assets/brazil_venezuela.png" alt="Foto 1">
-            <img src="assets/inscripciones_abiertas.png" alt="Foto 3">
-            <img src="assets/te_esperamos.png" alt="Foto 2">
-            <img src="assets/campamento_autorizado.png" alt="Foto 4">
+            <!-- SLIDE DE DÉBORA (Nuevo) -->
+            <div class="slide-item">
+                <img src="assets/galeria/webp/slide_debora.webp" alt="¿Quién es Débora?">
+                <div class="slide-overlay">
+                    <a href="debora.html" class="slide-btn">CONOCE A DÉBORA</a>
+                </div>
+            </div>
+
+            <!-- SLIDE 1 -->
+            <div class="slide-item">
+                <img src="assets/brazil_venezuela.png" alt="Foto 1">
+                <!-- SLIDE 1
+                <div class="slide-overlay">
+                    <a href="news.html" class="slide-btn">Ver Noticias</a>
+                </div> -->
+            </div>
+
+            <!-- SLIDE 2 -->
+            <div class="slide-item">
+                <img src="assets/inscripciones_abiertas.png" alt="Foto 3">
+                <!-- SLIDE 
+                <div class="slide-overlay">
+                    <a href="reglas.html" class="slide-btn">Inscribirse</a>
+                </div>1 -->
+            </div>
+
+            <!-- SLIDE 3 -->
+            <div class="slide-item">
+                <img src="assets/te_esperamos.png" alt="Foto 2">
+            </div>
+
+            <!-- SLIDE 4 -->
+            <div class="slide-item">
+                <img src="assets/campamento_autorizado.png" alt="Foto 4">
+            </div>
         </div>
         
         <button class="prev" id="prevBtn">❮</button>
         <button class="next" id="nextBtn">❯</button>
     </div>
 </section>
+
 
 <div class="menu-overlay" id="menu-overlay"></div>
 
@@ -164,7 +247,49 @@
     </footer>
 </main>
 
-    
+<div id="welcome-modal" class="modal-overlay">
+    <div class="modal-container">
+        <!-- Close Button (X) -->
+        <span class="close-modal" id="close-welcome">&times;</span>
+        
+        <!-- The 1080x1350 WebP Image -->
+        <img src="assets/galeria/webp/welcome.webp" alt="Bienvenido al Campamento" class="welcome-image">
+    </div>
+</div>
+
+<script>
+    (function() {
+        window.addEventListener('load', function() {
+            var modal = document.getElementById('welcome-modal');
+            var closeBtn = document.getElementById('close-welcome');
+
+            // 1. CHECK: If the user has seen it in this session, STOP here.
+            if (sessionStorage.getItem('welcomeShown')) {
+                modal.style.display = 'none';
+                return; 
+            }
+
+            // 2. SHOW: If they haven't seen it, show it.
+            modal.classList.add('active');
+
+            var closeModal = function() {
+                modal.classList.remove('active');
+                setTimeout(function() {
+                    modal.style.display = 'none';
+                }, 500);
+                
+                // 3. SAVE: Set the flag so it doesn't show again.
+                sessionStorage.setItem('welcomeShown', 'true');
+            };
+
+            closeBtn.onclick = closeModal;
+            modal.onclick = function(event) {
+                if (event.target === modal) closeModal();
+            };
+        });
+    })();
+</script>
+
 
     <script src="js/script.js"></script>
 </body>

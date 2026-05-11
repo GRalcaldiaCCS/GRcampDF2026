@@ -93,7 +93,8 @@ if (overlay) {
 // Lógica 4: Slider de Fotos
 let currentSlide = 0;
 const slidesContainer = document.querySelector('.slides');
-const allSlides = document.querySelectorAll('.slides img');
+// CHANGE: We now count the 'slide-item' divs, not just images
+const allSlides = document.querySelectorAll('.slide-item'); 
 const totalSlides = allSlides.length;
 
 const updateSlider = () => {
@@ -121,12 +122,13 @@ if (slidesContainer && totalSlides > 0) {
         });
     }
 
-
+    // Auto-slide every 8 seconds
     setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;
         updateSlider();
     }, 8000);
 }
+
 
 function startCountdown() {
     const targetDate = new Date("May 11, 2026 00:00:00").getTime();
@@ -236,3 +238,5 @@ lightbox.onclick = function(event) {
         lightbox.style.display = 'none';
     }
 };
+
+
