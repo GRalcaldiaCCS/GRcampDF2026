@@ -90,6 +90,15 @@ if (overlay) {
     overlay.onclick = closeMenu;
 }
 
+document.addEventListener('click', function(event) {
+    const isClickInsideMenu = sideMenu.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (sideMenu.classList.contains('active') && !isClickInsideMenu && !isClickOnToggle) {
+        closeMenu();
+    }
+});
+
 // Lógica 4: Slider de Fotos
 let currentSlide = 0;
 const slidesContainer = document.querySelector('.slides');
@@ -128,35 +137,6 @@ if (slidesContainer && totalSlides > 0) {
         updateSlider();
     }, 8000);
 }
-
-
-function startCountdown() {
-    const targetDate = new Date("May 11, 2026 00:00:00").getTime();
-
-    const timer = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-   
-        const d = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((distance % (1000 * 60)) / 1000);
-
-    
-        document.getElementById("days").innerText = d < 10 ? "0" + d : d;
-        document.getElementById("hours").innerText = h < 10 ? "0" + h : h;
-        document.getElementById("minutes").innerText = m < 10 ? "0" + m : m;
-        document.getElementById("seconds").innerText = s < 10 ? "0" + s : s;
-
-
-        if (distance < 0) {
-            clearInterval(timer);
-            document.querySelector(".countdown-container").innerHTML = "<h2 class='countdown-title'>¡El campamento ha comenzado!</h2>";
-        }
-    }, 1000);
-}
-startCountdown();
 
 
 document.addEventListener('DOMContentLoaded', function() {

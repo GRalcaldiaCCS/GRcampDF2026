@@ -192,5 +192,8 @@
     color: var(--purple-dark);
 }
 
+p{
+    line-height:1.6;
+}
 
 
