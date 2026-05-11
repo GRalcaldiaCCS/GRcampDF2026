@@ -63,8 +63,8 @@
     </header>
 
     <div class="day-selector">
-        <button class="filter-btn active" data-target="day-lunes">Lunes 11</button>
-        <button class="filter-btn" data-target="day-martes">Martes 12</button>
+        <button class="filter-btn" data-target="day-lunes">Lunes 11</button>
+        <button class="filter-btn active" data-target="day-martes">Martes 12</button>
         <button class="filter-btn" data-target="day-miercoles">Mércoles 13</button>
         <button class="filter-btn" data-target="day-jueves">Jueves 14</button>
         <button class="filter-btn" data-target="day-viernes">Viernes 15</button>
@@ -91,7 +91,7 @@
 
     <!-- L U N E S -->
     
-    <div id="day-lunes" class="schedule-day-container active">
+    <div id="day-lunes" class="schedule-day-container" >
 
         <div class="schedule-item">
         <div class="schedule-header">
@@ -204,7 +204,7 @@
 
     <!-- M A R T E S -->
 
-    <div id="day-martes" class="schedule-day-container">
+    <div id="day-martes" class="schedule-day-container active">
          <div class="schedule-item">
         <div class="schedule-header">
             <span class="activity-label">ACTIVIDAD 1</span>
@@ -271,10 +271,31 @@
         </div>
     </div>
 
-
     <div class="schedule-item">
         <div class="schedule-header">
             <span class="activity-label">ACTIVIDAD 4</span>
+            <div class="period-container">
+                <div class="period-box morning">M</div>
+                <div class="period-box afternoon">T</div>
+            </div>
+        </div>
+        <div class="activity-details">
+            <div class="speaker-tag-wrapper">
+                <img src="assets/debora_icon.jpg" alt="Débora Falda" class="tag-avatar">
+                <a href="debora.html"><span class="category">DÉBORA FALDA</span></a>
+            </div>
+            <div class="title-with-icon">
+                <h3>Manejo de Aro</h3>
+                <img src="assets/icons/hoop.png" alt="aro" class="apparatus-icon">
+            </div>
+            <p>Revisión de los grupos técnicos fundamentales del aro: rotaciones sobre el cuerpo o el suelo, lanzamientos, capturas y pasos a través del aparato. Se enfatiza el plano correcto de movimiento para evitar vibraciones o desviaciones en la trayectoria del implemento.</p>
+        </div>
+    </div>
+
+
+    <div class="schedule-item">
+        <div class="schedule-header">
+            <span class="activity-label">ACTIVIDAD 5</span>
             <div class="period-container">
                 <div class="period-box morning">M</div>
                 <div class="period-box afternoon">T</div>
@@ -609,7 +630,7 @@
 
     <div class="schedule-item">
         <div class="schedule-header">
-            <span class="activity-label">ACTIVIDAD 4</span>
+            <span class="activity-label">ACTIVIDAD 5</span>
             <div class="period-container">
                 <div class="period-box morning">M</div>
                 <div class="period-box afternoon">T</div>

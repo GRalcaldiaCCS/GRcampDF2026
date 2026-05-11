@@ -175,7 +175,7 @@
     background: #fff9ff;
 }
 
-/* --- RESPONSIVE --- */
+
 @media (max-width: 480px) {
     .schedule-item {
         flex-direction: column; 

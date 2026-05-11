@@ -65,21 +65,23 @@
     
     <div class="progress-bar-wrapper">
         <!-- DÍA 1 "day-segment completed"✓-->
-        <div class="day-segment active">
-    <a href="cronograma.html" class="tracker-link">
-        <div class="status-marker">
-            <div class="pulse-dot"></div>
+        <div class="day-segment completed">
+            <div class="status-marker">
+                 <span class="check-icon">✓</span>
+            </div>
+            <span class="day-badge">Día 1</span>
         </div>
-        <span class="day-badge">Día 1</span>
-        <small class="live-text">Entrenando</small>
-    </a>
-</div>
 
         <!-- DÍA 2 -->
-        <div class="day-segment">
-            <div class="status-marker"></div>
-            <span class="day-label">Día 2</span>
-        </div>
+        <div class="day-segment active">
+        <a href="cronograma.html" class="tracker-link">
+            <div class="status-marker">
+                <!-- <div class="pulse-dot"></div>-->
+            </div>
+            <span class="day-badge">Día 2</span>
+            <!-- <small class="live-text">Entrenando</small>-->
+        </a>
+    </div>
 
         <!-- DÍA 3 -->
         <div class="day-segment">
@@ -272,7 +274,11 @@
 
 
 <script>
-    function showToast(message) {
+    function showToast(message, storageKey, duration = 8000) {
+
+         if (sessionStorage.getItem(storageKey)) {
+        return; 
+    }
         const container = document.getElementById('toast-container');
         const toast = document.createElement('div');
         
@@ -303,17 +309,30 @@
 
        
         setTimeout(() => {
-            toast.style.transform = "translateX(-120%)";
-            setTimeout(() => toast.remove(), 500);
-        }, 5000);
-    }
+        toast.style.transform = "translateX(-120%)";
+        setTimeout(() => {
+            toast.remove();
+            // 2. MARK AS SEEN once it disappears
+            sessionStorage.setItem(storageKey, 'true');
+        }, 600);
+    }, duration);
+}
+    
 
   
     window.addEventListener('load', function() {
         console.log("Toast system initialized"); //
         setTimeout(() => {
-            showToast("¡Iniciamos Día 1!");
+            showToast("¡COMPLETAMOS DÍA 1! ✅ ");
         }, 8000); 
+
+        setTimeout(() => {
+            showToast("Descansa bien. Boa noite! 😴");
+        }, 10000);
+        
+        setTimeout(() => {
+            showToast("Mañana: ballet, flexibilidad... 👀");
+        }, 13000); 
     });
 </script>
 
