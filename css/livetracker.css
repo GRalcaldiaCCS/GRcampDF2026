@@ -129,24 +129,37 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) translateZ(0);;
     width: 100%;
     height: 100%;
     background: #802A8C;
     border-radius: 50%;
-    animation: pulse-animation 2s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+     -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    animation: simple-pulse 2s infinite ease-out;
     z-index: -1;
-    opacity: 0.6;
 }
 
-@keyframes pulse-animation {
-    0% { width: 14px; height: 14px; opacity: 0.8; }
-    100% { width: 50px; height: 50px; opacity: 0; }
+@keyframes simple-pulse {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.8;
+    }
+    /* We stop at 99% to avoid the "100% opacity snap" glitch in Chrome */
+    99% {
+        transform: translate(-50%, -50%) scale(3.5);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(3.5);
+        opacity: 0;
+    }
 }
+
 
 @keyframes blink {
     0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+    50% { opacity: 0.2; }
 }
 
 .day-segment a {
