@@ -73,21 +73,23 @@
         </div>
 
         <!-- DÍA 2 -->
+        <div class="day-segment completed">
+            <div class="status-marker">
+                 <span class="check-icon">✓</span>
+            </div>
+            <span class="day-badge">Día 2</span>
+        </div>
+
+        <!-- DÍA 3 -->
         <div class="day-segment active">
         <a href="cronograma.html" class="tracker-link">
             <div class="status-marker">
-                <div class="pulse-dot"></div>
+              <!--  <div class="pulse-dot"></div>-->
             </div>
-            <span class="day-badge">Día 2</span>
-            <small class="live-text">Entrenando</small>
+            <span class="day-badge">Día 3</span>
+            <!--<small class="live-text">Entrenando</small>-->
         </a>
     </div>
-
-        <!-- DÍA 3 -->
-        <div class="day-segment">
-            <div class="status-marker"></div>
-            <span class="day-label">Día 3</span>
-        </div>
 
         <!-- DÍA 4 -->
         <div class="day-segment">
@@ -312,7 +314,7 @@
         toast.style.transform = "translateX(-120%)";
         setTimeout(() => {
             toast.remove();
-            // 2. MARK AS SEEN once it disappears
+          
             sessionStorage.setItem(storageKey, 'true');
         }, 600);
     }, duration);
@@ -323,12 +325,16 @@
     window.addEventListener('load', function() {
         console.log("Toast system initialized"); //
         setTimeout(() => {
-            showToast(" 🛑LIVE 🎞️🎥 Transmisión en vivo as las 5:00 P.M. HLV");
+            showToast("Día 2 ✅");
         }, 3000); 
 
         setTimeout(() => {
-            showToast('En Instagram <a href="https://instagram.com/gr_alcaldiadeccs" target="_blank" style="color: #c39bd3; text-decoration: underline;">@gr_alcaldiadeccs</a>', 'insta_toast');
+            showToast("¿Qué tal estuvo el entrenamiento con Débora <br> y la charla con Andrea?");
         }, 5000);
+
+        setTimeout(() => {
+            showToast("Descanse bem, boa noite e amanhã seguimos firme no dia 3!");
+        }, 7000);
         
     });
 </script>
