@@ -102,7 +102,7 @@ document.addEventListener('click', function(event) {
 // Lógica 4: Slider de Fotos
 let currentSlide = 0;
 const slidesContainer = document.querySelector('.slides');
-// CHANGE: We now count the 'slide-item' divs, not just images
+
 const allSlides = document.querySelectorAll('.slide-item'); 
 const totalSlides = allSlides.length;
 
@@ -131,7 +131,7 @@ if (slidesContainer && totalSlides > 0) {
         });
     }
 
-    // Auto-slide every 8 seconds
+    
     setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;
         updateSlider();
@@ -172,8 +172,8 @@ document.querySelectorAll('.news-media').forEach(grid => {
     
     images.forEach((img, index) => {
         img.onclick = () => {
-            currentImages = images; // Save the current grid's images
-            currentIndex = index;   // Start at the clicked image
+            currentImages = images; 
+            currentIndex = index;   
             showImage();
         };
     });
@@ -197,7 +197,7 @@ document.getElementById('prev-btn').onclick = (e) => {
     showImage();
 };
 
-// 3. Keyboard Navigation (Bonus)
+
 document.onkeydown = (e) => {
     if (lightbox.style.display === 'flex') {
         if (e.key === "ArrowRight") document.getElementById('next-btn').click();
@@ -206,14 +206,14 @@ document.onkeydown = (e) => {
     }
 };
 
-// Close the lightbox when clicking the X
+
 document.querySelector('.close-lightbox').onclick = function() {
     lightbox.style.display = 'none';
 };
 
-// Close the lightbox when clicking anywhere on the dark background
+
 lightbox.onclick = function(event) {
-    // This ensures clicking the image or the buttons doesn't close it
+
     if (event.target === lightbox) {
         lightbox.style.display = 'none';
     }

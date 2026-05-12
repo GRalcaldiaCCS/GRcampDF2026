@@ -322,8 +322,8 @@ address strong {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(4px);    /* Elegant blur effect */
-    z-index: 998;                  /* Just below the side-menu */
+    backdrop-filter: blur(4px);    
+    z-index: 998;                 
     display: none; 
 }
 
@@ -695,9 +695,9 @@ body.menu-open {
 }
 
 .back-home-wrapper {
-    margin: 80px 0 40px; /* Large gap from the last news entry */
+    margin: 80px 0 40px; 
     display: flex;
-    justify-content: center; /* Centers the button on the page */
+    justify-content: center; 
 }
 
 .btn-back-home {
@@ -706,8 +706,8 @@ body.menu-open {
     gap: 12px;
     text-decoration: none;
     padding: 12px 25px;
-    border: 1.5px solid var(--text-main); /* Thin, elegant border */
-    border-radius: 30px; /* Rounded pill shape */
+    border: 1.5px solid var(--text-main); 
+    border-radius: 30px; 
     transition: all 0.3s ease;
     
     /* Text Style */
@@ -724,18 +724,18 @@ body.menu-open {
     transition: transform 0.3s ease;
 }
 
-/* Hover Effect - Atmospheric & Elegant */
+
 .btn-back-home:hover {
-    background-color: var(--text-main, #2c3e50); /* Added a fallback color */
+    background-color: var(--text-main, #2c3e50); 
     border-color: var(--text-main, #2c3e50);
 }
 
 .btn-back-home:hover span {
-    color: #ffffff !important; /* Forces the text to stay white against the dark bg */
+    color: #ffffff !important; 
 }
 
 .btn-back-home:hover .back-icon {
-    filter: brightness(0) invert(1); /* Turns the icon white */
+    filter: brightness(0) invert(1); 
 }
 
 .main-footer{
@@ -745,8 +745,8 @@ body.menu-open {
 /* Contenedor de cada slide */
 .slide-item {
     min-width: 100%;
-    position: relative; /* Importante para posicionar el botón */
-    height: 400px; /* Tu altura de escritorio */
+    position: relative; 
+    height: 400px; 
 }
 
 .slide-item img {
@@ -782,13 +782,13 @@ body.menu-open {
 .slide-btn:hover {
     background: var(--purple-dark);
     color: white;
-    transform: translateX(-50%) scale(1.05); /* Mantiene el centro y crece un poco */
+    transform: translateX(-50%) scale(1.05); 
 }
 
 /* Ajuste móvil */
 @media (max-width: 600px) {
     .slide-item {
-        height: 250px; /* Tu altura móvil */
+        height: 250px; 
     }
     .slide-btn {
         padding: 10px 20px;

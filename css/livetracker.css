@@ -10,7 +10,7 @@
 
 .tracker-title {
     display: flex;
-    flex-direction: column; /* Alinea los textos verticalmente */
+    flex-direction: column; 
     align-items: center;
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
@@ -21,14 +21,14 @@
 }
 
 .portuguese-subtitle {
-    font-family: 'Playfair Display', serif; /* Usamos la serif para elegancia */
+    font-family: 'Playfair Display', serif; 
     font-style: italic;
-    font-size: 1.2rem; /* Más pequeño */
+    font-size: 1.2rem; 
     font-weight: 400;
-    text-transform: none; /* Quita las mayúsculas */
+    text-transform: none; 
     color: var(--purple-dark);
-    margin-top: 5px; /* Lo acerca al título principal */
-    letter-spacing: 0px; /* Estilo natural de escritura */
+    margin-top: 5px; 
+    letter-spacing: 0px; 
 }
 
 .progress-bar-wrapper {
@@ -39,10 +39,10 @@
     padding: 0 10px;
 }
 
-/* La línea gris de fondo */
+
 .progress-line {
     position: absolute;
-    top: 15px; /* Centrada con los círculos */
+    top: 15px; 
     left: 10px;
     right: 10px;
     height: 6px;
@@ -59,7 +59,7 @@
     flex: 1;
 }
 
-/* El círculo del marcador */
+
 .status-marker {
     width: 45px;
     height: 45px;
@@ -81,7 +81,7 @@
     color: #999;
 }
 
-/* --- ESTADO: COMPLETADO (VERDE) --- */
+
 .day-segment.completed .status-marker {
     background: #009C3B; 
     border-color: #2ecc71;
@@ -97,7 +97,7 @@
     color: #2ecc71;
 }
 
-/* --- ESTADO: ACTIVO (PULSO VIVO) --- */
+
 .day-segment.active .status-marker {
     border-color: var(--purple-dark);
     position: relative;
@@ -110,11 +110,11 @@
 .day-segment.active .day-label small {
     display: block;
     font-size: 0.6rem;
-    color: #e74c3c; /* Rojo alerta */
+    color: #e74c3c; 
     animation: blink 1s infinite;
 }
 
-/* EFECTO DE PULSO (OLYMPIC STYLE) */
+
 .pulse-dot {
     width: 18px;
     height: 18px;
@@ -145,7 +145,7 @@
         transform: translate(-50%, -50%) scale(1);
         opacity: 0.8;
     }
-    /* We stop at 99% to avoid the "100% opacity snap" glitch in Chrome */
+   
     99% {
         transform: translate(-50%, -50%) scale(3.5);
         opacity: 0;
@@ -168,7 +168,7 @@
       
 }
 
-/* Contenedor del link para que todo el bloque sea clicleable */
+
 .tracker-link {
     text-decoration: none;
     display: flex;
@@ -176,34 +176,34 @@
     align-items: center;
 }
 
-/* La etiqueta del día (Badge) */
+
 .day-badge {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
     font-size: 0.8rem;
     padding: 4px 12px;
     border-radius: 20px;
-    background: #f0f0f0; /* Gris suave por defecto */
+    background: #f0f0f0; 
     color: #888;
     transition: all 0.3s ease;
     margin-top: 5px;
 }
 
-/* Cuando el día está completado */
+
 .completed .day-badge {
-    background: rgba(46, 204, 113, 0.15); /* Verde suave */
+    background: rgba(46, 204, 113, 0.15); 
     color: #27ae60;
 }
 
-/* Cuando el día está ACTIVO (El que más resalta) */
+
 .active .day-badge {
     background: var(--purple-dark);
     color: white;
     box-shadow: 0 4px 10px rgba(142, 68, 173, 0.3);
-    transform: scale(1.1); /* Lo hace un poco más grande */
+    transform: scale(1.1); 
 }
 
-/* Texto de "EN VIVO" */
+
 .live-text {
     display: block;
     font-size: 0.6rem;

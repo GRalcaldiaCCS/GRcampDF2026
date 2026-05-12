@@ -1,20 +1,20 @@
 .modal-overlay {
-        display: none; /* Hidden by default */
+        display: none; 
         position: fixed;
-        z-index: 10000; /* Extremely high to stay above everything */
+        z-index: 10000; 
         left: 0;
         top: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.85); /* Premium dark background */
-        backdrop-filter: blur(8px); /* Modern blur effect */
+        background-color: rgba(0, 0, 0, 0.85); 
+        backdrop-filter: blur(8px);
         align-items: center;
         justify-content: center;
         opacity: 0;
         transition: opacity 0.5s ease;
     }
 
-    /* When this class is added, the modal fades in */
+
     .modal-overlay.active {
         display: flex;
         opacity: 1;
@@ -23,7 +23,7 @@
     .modal-container {
         position: relative;
         width: 90%;
-        max-width: 420px; /* Perfect size for a 1080x1350 portrait image */
+        max-width: 420px; 
         animation: modalEntry 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
     }
 

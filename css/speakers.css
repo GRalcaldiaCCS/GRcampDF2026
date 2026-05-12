@@ -58,7 +58,7 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 4px 12px;
-    border-radius: 50px; /* Pill shape */
+    border-radius: 50px;
     margin: 8px 0;
     
    
@@ -141,7 +141,7 @@
 }
 
 .social-icon {
-    width: 20px; /* Small and elegant */
+    width: 20px; 
     height: 20px;
     object-fit: contain;
 }

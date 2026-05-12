@@ -28,7 +28,7 @@
     margin-bottom: 20px;
 }
 
-/* --- THE MODERN TABLE --- */
+
 .table-responsive {
     overflow-x: auto;
     margin: 20px 0;
@@ -58,7 +58,7 @@
     background-color: #f9f6ff;
 }
 
-/* Innovation Cards */
+
 .innovation-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -109,13 +109,13 @@
 
 .countries-grid {
     display: grid;
-    grid-template-columns: 1fr; /* 1 columna en móvil */
+    grid-template-columns: 1fr; 
     gap: 15px;
 }
 
 @media (min-width: 600px) {
     .countries-grid {
-        grid-template-columns: 1fr 1fr; /* 2 columnas en pantallas más grandes */
+        grid-template-columns: 1fr 1fr; 
     }
 }
 
@@ -165,7 +165,7 @@
     text-decoration: none;
     margin: 10px 0;
     padding: 5px 12px;
-    background: rgba(0, 0, 0, 0.03); /* Fondo muy sutil */
+    background: rgba(0, 0, 0, 0.03); 
     border-radius: 20px;
     transition: all 0.3s ease;
 }
@@ -178,13 +178,13 @@
 }
 
 .social-icon-small {
-    width: 18px; /* Tamaño discreto y pro */
+    width: 18px; 
     height: 18px;
     object-fit: contain;
 }
 
 .profile-social:hover {
-    background: rgba(142, 68, 173, 0.1); /* Efecto hover con tu morado */
+    background: rgba(142, 68, 173, 0.1); 
     transform: translateY(-2px);
 }
 
