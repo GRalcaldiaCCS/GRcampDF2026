@@ -81,21 +81,23 @@
         </div>
 
         <!-- DÍA 3 -->
+        <div class="day-segment completed">
+            <div class="status-marker">
+                 <span class="check-icon">✓</span>
+            </div>
+            <span class="day-badge">Día 3</span>
+        </div>
+
+        <!-- DÍA 4 -->
         <div class="day-segment active">
         <a href="cronograma.html" class="tracker-link">
             <div class="status-marker">
-              <div class="pulse-dot"></div>
+             <!-- <div class="pulse-dot"></div>-->
             </div>
             <span class="day-badge">Día 3</span>
-            <small class="live-text">Entrenando</small>
+            <!-- <small class="live-text">Entrenando</small>-->
         </a>
     </div>
-
-        <!-- DÍA 4 -->
-        <div class="day-segment">
-            <div class="status-marker"></div>
-            <span class="day-label">Día 4</span>
-        </div>
 
         <!-- DÍA 5 -->
         <div class="day-segment">
@@ -323,12 +325,16 @@
     window.addEventListener('load', function() {
         console.log("Toast system initialized"); 
         setTimeout(() => {
-            showToast("Día 3 💪🏻 Vamos lá!");
+            showToast("Día 3 ✅ 💪🏻 60% de campamento completado.");
         }, 3000); 
 
         setTimeout(() => {
-            showToast("Amaneció lloviendo en Caracas ☔");
+            showToast("Nos vemos mañana con más...");
         }, 5000);
+
+        setTimeout(() => {
+            showToast("y charla psicológica con Darío J. Ortega 🧠");
+        }, 7000);
         
     });
 </script>
