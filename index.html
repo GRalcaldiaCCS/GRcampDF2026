@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GR Training Camp 2026 | Débora Falda</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/confetti.css">
     <link rel="stylesheet" href="css/popup.css">
     <link rel="stylesheet" href="css/livetracker.css">
     <link rel="stylesheet" href="css/toast.css">
@@ -21,6 +22,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+<div id="celebration-confetti-container" class="confetti-canvas-overlay"></div>
+
 
     <div class="menu-toggle" id="mobile-menu">
         <span class="menu-text">MENÚ</span>
@@ -58,9 +63,9 @@
 </nav>
 
 <section class="live-tracker-container">
-    <h2 class="tracker-title">Estado del Campamento
-        <span class="portuguese-subtitle">Status do Acampamento</span>
-    </h2>
+    <h1 class="tracker-title">CAMPAMENTO 100% COMPLETADO
+        <span class="portuguese-subtitle">Missão cumprida! 100% concluído.</span>
+    </h1>
     
     
     <div class="progress-bar-wrapper">
@@ -97,15 +102,12 @@
         </div>
 
         <!-- DÍA 5 -->
-        <div class="day-segment active">
-        <a href="cronograma.html" class="tracker-link">
+        <div class="day-segment completed">
             <div class="status-marker">
-                <div class="pulse-dot"></div>
+                 <span class="check-icon">✓</span>
             </div>
             <span class="day-badge">Día 5</span>
-            <small class="live-text">Entrenando</small>
-        </a>
-    </div>
+        </div>
         
         <!-- Línea de fondo -->
         <div class="progress-line"></div>
@@ -239,7 +241,7 @@
 <div id="welcome-modal" class="modal-overlay">
     <div class="modal-container">
         <span class="close-modal" id="close-welcome">&times;</span>
-        <a href="cronograma.html"><img src="assets/galeria/webp/day_5.webp" alt="Bienvenido al Campamento" class="welcome-image"></a>
+        <img src="assets/galeria/webp/parabens.webp" alt="Bienvenido al Campamento" class="welcome-image">
     </div>
 </div>
 
@@ -326,18 +328,88 @@
     window.addEventListener('load', function() {
         console.log("Toast system initialized"); 
         setTimeout(() => {
-            showToast("Día 5... ¡Último día! 😭😭😭");
+            showToast("🎉🎉 ¡Felicidades por completar el Campamento! 🎉🎉");
         }, 3000); 
 
         setTimeout(() => {
-            showToast("Vamos dar o nosso melhor e nos divertir! 🎉🎉🎉");
+            showToast("¡Esperamos que lo hayas disfrutado al máximo!");
         }, 5000);
-
-        setTimeout(() => {
-            showToast("Padres, ¡los esperamos hoy!");
-        }, 7000);
         
     });
+</script>
+
+<script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+ 
+    const VZ_BR_COLORS = ['#FFCC00', '#00247D', '#CF142B', '#009739'];
+    const container = document.getElementById('celebration-confetti-container');
+    if (!container) return;
+
+    const isMobile = window.innerWidth < 600;
+    
+
+    const spawnRateInterval = isMobile ? 250 : 150; 
+    const particlesPerWave = isMobile ? 2 : 4;       
+
+   
+    function spawnConfettiWave() {
+  
+        if (!document.getElementById('celebration-confetti-container')) return;
+
+        for (let i = 0; i < particlesPerWave; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'confetti-particle';
+
+  
+            const width = Math.random() * 8 + 6 + 'px';
+            const height = Math.random() * 12 + 6 + 'px';
+            const leftPosition = Math.random() * 100 + '%';
+            const randomColor = VZ_BR_COLORS[Math.floor(Math.random() * VZ_BR_COLORS.length)];
+
+            particle.style.width = width;
+            particle.style.height = height;
+            particle.style.backgroundColor = randomColor;
+            particle.style.left = leftPosition;
+
+            container.appendChild(particle);
+
+        
+            const duration = Math.random() * 3000 + 3000; 
+            const horizontalDrift = Math.random() * 160 - 80; 
+            const rotationStart = Math.random() * 360;
+            const rotationSpeed = Math.random() * 1200 + 600;
+
+          
+            const animation = particle.animate([
+                { transform: `translate3d(0, -20px, 0) rotateX(0deg) rotateY(${rotationStart}deg) rotateZ(0deg)`, opacity: 0.9 },
+                { opacity: 0.9, offset: 0.85 }, 
+                { transform: `translate3d(${horizontalDrift}px, ${window.innerHeight + 20}px, 0) rotateX(${rotationSpeed}deg) rotateY(${rotationSpeed / 2}deg) rotateZ(${rotationSpeed * 1.5}deg)`, opacity: 0 }
+            ], {
+                duration: duration,
+                easing: 'linear' 
+            });
+
+           
+            animation.onfinish = () => {
+                particle.remove();
+            };
+        }
+    }
+
+
+    const streamIntervalId = setInterval(spawnConfettiWave, spawnRateInterval);
+
+    
+    setTimeout(() => {
+        clearInterval(streamIntervalId); 
+        container.classList.add('fade-out');
+        setTimeout(() => container.remove(), 4000); 
+    }, 180000);
+});
+
+
+    
 </script>
 
     <script src="js/script.js"></script>
