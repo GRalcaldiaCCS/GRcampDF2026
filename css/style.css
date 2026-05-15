@@ -593,7 +593,7 @@ body.menu-open {
 }
 
 
-.item-1, .item-4, .item-5, .item-8 { 
+.item-1, .item-4, .item-5, .item-8, .item-9 { 
     background: linear-gradient(135deg, var(--deep-blue) 0%, var(--magenta) 100%);
 }
 .item-2, .item-3, .item-6, .item-7 {
@@ -795,3 +795,16 @@ body.menu-open {
         font-size: 0.7rem;
     }
 }
+
+.custom-brand-frame-overlay {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    pointer-events: none;
+    z-index: 10;
+}
+
