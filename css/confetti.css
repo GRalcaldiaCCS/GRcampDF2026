@@ -1,14 +1,13 @@
-/* Confetti Screen Overlay Wrapper */
 .confetti-canvas-overlay {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none; /* Allows users to click buttons beneath the falling confetti */
-    z-index: 999999; /* Higher than sliders and pop-ups */
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none; /* Crucial: lets users click buttons through the canvas */
+    z-index: 999999;
 }
+
 
 /* Individual Confetti Particle Component */
 .confetti-particle {
@@ -27,3 +26,5 @@
     opacity: 0;
     transition: opacity 1.5s ease-out;
 }
+
+
